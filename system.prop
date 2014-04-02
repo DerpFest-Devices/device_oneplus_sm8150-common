@@ -61,6 +61,7 @@ ro.iorapd.enable=true
 av.offload.enable=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
+persist.mm.enable.prefetch=true
 vendor.swvdec.log.level=1
 vendor.vidc.debug.level=1
 ro.media.recorder-max-base-layer-fps=60
