@@ -20,13 +20,16 @@ package org.omnirom.device;
 import static android.provider.Settings.Global.ZEN_MODE_OFF;
 import static android.provider.Settings.Global.ZEN_MODE_IMPORTANT_INTERRUPTIONS;
 
+import org.omnirom.device.R;
 import android.app.ActivityManagerNative;
+import android.app.ActivityThread;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -39,6 +42,7 @@ import android.net.Uri;
 import android.text.TextUtils;
 import android.os.FileObserver;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
@@ -54,6 +58,11 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.HapticFeedbackConstants;
 
+import android.view.Gravity;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.widget.Toast;
 import com.android.internal.os.DeviceKeyHandler;
 import org.omnirom.device.PackageUtils;
 import com.android.internal.util.ArrayUtils;
@@ -138,6 +147,8 @@ public class KeyHandler implements DeviceKeyHandler {
     };
 
     protected final Context mContext;
+    private final Context mSysUiContext;
+    private final Context mResContext;
     private final PowerManager mPowerManager;
     private WakeLock mGestureWakeLock;
     private Handler mHandler = new Handler();
@@ -165,6 +176,8 @@ public class KeyHandler implements DeviceKeyHandler {
     private boolean mToggleTorch;
     private boolean mTorchState;
     private boolean mDoubleTapToWake;
+    private Toast toast;
+
 
     private SensorEventListener mPocketProximitySensor = new SensorEventListener() {
         @Override
@@ -248,7 +261,7 @@ public class KeyHandler implements DeviceKeyHandler {
                     Settings.System.DEVICE_FEATURE_SETTINGS))){
                 updateDozeSettings();
                 return;
-            } 
+            }
             update();
         }
 
@@ -290,6 +303,8 @@ public class KeyHandler implements DeviceKeyHandler {
         mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
         mGestureWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
                 "GestureWakeLock");
+        mSysUiContext = ActivityThread.currentActivityThread().getSystemUiContext();
+        mResContext = getPackageContext(mContext, "org.omnirom.device");
         mSettingsObserver = new SettingsObserver(mHandler);
         mSettingsObserver.observe();
         mNoMan = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -312,11 +327,11 @@ public class KeyHandler implements DeviceKeyHandler {
                     boolean vibrate = state.contains("USB-HOST=0");
                     if (DEBUG) Log.i(TAG, "state = " + state + " Got ringing = " + ringing + ", silent = " + silent + ", vibrate = " + vibrate);
                     if(ringing && !silent && !vibrate)
-                        doHandleSliderAction(2);
+                        doHandleSliderAction(2, 175);
                     if(silent && !ringing && !vibrate)
-                        doHandleSliderAction(0);
+                        doHandleSliderAction(0, 90);
                     if(vibrate && !silent && !ringing)
-                        doHandleSliderAction(1);
+                        doHandleSliderAction(1, 135);
                 } catch(Exception e) {
                     Log.e(TAG, "Failed parsing uevent", e);
                 }
@@ -501,27 +516,32 @@ public class KeyHandler implements DeviceKeyHandler {
         return 0;
     }
 
-    private void doHandleSliderAction(int position) {
+    private void doHandleSliderAction(int position, int yOffset) {
         int action = getSliderAction(position);
         if ( action == 0) {
             mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
             mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+            showToast(R.string.toast_ringer, Toast.LENGTH_SHORT, yOffset);
             disableTorch();
         } else if (action == 1) {
             mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
             mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_VIBRATE);
+            showToast(R.string.toast_vibrate, Toast.LENGTH_SHORT, yOffset);
             disableTorch();
         } else if (action == 2) {
             mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
             mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_SILENT);
+            showToast(R.string.toast_silent, Toast.LENGTH_SHORT, yOffset);
             disableTorch();
         } else if (action == 3) {
             mNoMan.setZenMode(ZEN_MODE_IMPORTANT_INTERRUPTIONS, null, TAG);
             mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+            showToast(R.string.toast_dnd, Toast.LENGTH_SHORT, yOffset);
             disableTorch();
         } else if (action == 4) {
             mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
             mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+            showToast(R.string.toast_flash, Toast.LENGTH_SHORT, yOffset);
             if (mProxyIsNear && mUseProxiCheck) {
                 return;
             } else {
@@ -530,7 +550,6 @@ public class KeyHandler implements DeviceKeyHandler {
                 toggleTorch();
             }
         }
-
     }
 
     private void disableTorch() {
@@ -702,5 +721,36 @@ public class KeyHandler implements DeviceKeyHandler {
                 }
             }
         }
+    }
+
+    void showToast(int messageId, int duration, int yOffset, Drawable icon) {
+        final String message = mResContext.getResources().getString(messageId);
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                if (toast != null) toast.cancel();
+                toast = Toast.makeText(mSysUiContext, message, duration);
+                toast.setGravity(Gravity.TOP|Gravity.RIGHT, 0, yOffset);
+                toast.setIcon(icon);
+                toast.show();
+            }
+        });
+    }
+
+    public static Context getPackageContext(Context context, String packageName) {
+        Context pkgContext = null;
+        if (context.getPackageName().equals(packageName)) {
+            pkgContext = context;
+        } else {
+            try {
+                pkgContext = context.createPackageContext(packageName,
+                        Context.CONTEXT_IGNORE_SECURITY
+                                | Context.CONTEXT_INCLUDE_CODE);
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+        return pkgContext;
     }
 }

@@ -117,4 +117,10 @@
     <string name="panel_mode_info">Disable panel mode requires reboot.</string>
 
     <string name="dcdimming_title">DC Dimming</string>
+
+    <string name="toast_ringer">Ringer</string>
+    <string name="toast_vibrate">Vibrate only</string>
+    <string name="toast_dnd">Do Not Disturb</string>
+    <string name="toast_silent">Silent</string>
+    <string name="toast_flash">Flashlight</string>
 </resources>
