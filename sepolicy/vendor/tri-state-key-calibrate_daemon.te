@@ -1,0 +1,9 @@
+type tri-state-key-calibrate_daemon, domain;
+type tri-state-key-calibrate_daemon_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(tri-state-key-calibrate_daemon)
+
+allow tri-state-key-calibrate_daemon mnt_vendor_file:dir { search };
+allow tri-state-key-calibrate_daemon persist_engineer_file:dir { search };
+allow tri-state-key-calibrate_daemon persist_engineer_file:file { getattr open read };
+allow tri-state-key-calibrate_daemon sysfs_tri_state_key:file { getattr open write };
