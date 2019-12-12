@@ -88,6 +88,8 @@ on init
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
+    # Vibrator
+    chown system system /sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
