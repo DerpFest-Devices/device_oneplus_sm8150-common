@@ -33,6 +33,7 @@ using android::status_t;
 int main() {
     android::sp<IFingerprintInscreen> service = new FingerprintInscreen();
 
+    android::hardware::setMinSchedulerPolicy(service, SCHED_NORMAL, -20);
     configureRpcThreadpool(1, true);
 
     status_t status = service->registerAsService();

@@ -3,4 +3,5 @@ service vendor.fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.lineage.biometrics
     class hal
     user system
     group system
+    priority -20
     shutdown critical
