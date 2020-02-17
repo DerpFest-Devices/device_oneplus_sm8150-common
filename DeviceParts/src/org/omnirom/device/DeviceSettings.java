@@ -196,6 +196,14 @@ public class DeviceSettings extends PreferenceFragment implements
         }
         try {
             String[] parts = value.split(",");
+            int noOptions = getResources().getStringArray(
+                    R.array.slider_key_action_values).length;
+            // Making sure the value in settings (which may be restored from other roms)
+            // will not make an OOB exception. Resetting to 0 (disabled) if it does.
+            if (Integer.valueOf(parts[position]) > noOptions
+                    || Integer.valueOf(parts[position]) < 0) {
+                parts[position] = "0";
+            }
             return Integer.valueOf(parts[position]);
         } catch (Exception e) {
         }
