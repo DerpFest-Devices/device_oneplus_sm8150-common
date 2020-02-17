@@ -52,6 +52,7 @@
     <string name="touchscreen_gesture_action_next_track">Play the next music track</string>
     <string name="touchscreen_gesture_action_volume_down">Lower media volume</string>
     <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
+    <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
 
     <!-- Notification slider -->
     <string name="notification_slider_category_title">Notification slider</string>
