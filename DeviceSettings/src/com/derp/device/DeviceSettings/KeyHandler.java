@@ -34,6 +34,7 @@ import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.os.SystemClock;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.provider.Settings;
@@ -133,7 +134,17 @@ public class KeyHandler implements DeviceKeyHandler {
             doHapticFeedback(sSupportedSliderHaptics.get(keyCodeValue));
         mNotificationManager.setZenMode(sSupportedSliderZenModes.get(keyCodeValue), null, TAG);
         mPrevKeyCode = keyCodeValue;
+        int position = scanCode == 601 ? 2 : scanCode == 602 ? 1 : 0;
+        sendUpdateBroadcast(position);
         return null;
+    }
+
+    private void sendUpdateBroadcast(int position) {
+        Intent intent = new Intent(Constants.ACTION_UPDATE_SLIDER_POSITION);
+        intent.putExtra(Constants.EXTRA_SLIDER_POSITION, position);
+        mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        intent.setFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY);
+        Log.d(TAG, "slider change to positon " + position);
     }
 
     private void doHapticFeedback(int effect) {
