@@ -25,6 +25,8 @@
 
     <protected-broadcast android:name="org.derpfest.device.DeviceSettings.UPDATE_SETTINGS" />
 
+    <protected-broadcast android:name="org.derpfest.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
+
     <application
         android:icon="@drawable/ic_settings_device"
         android:label="@string/device_title"
