@@ -36,6 +36,7 @@
         <item>org.lineageos.camerahelper.KeyHandler</item>
     </string-array>
 
+<<<<<<< HEAD
     <!-- Hardware keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
@@ -72,4 +73,13 @@
 
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
+
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">0</integer>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">com.derp.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
+
 </resources>
