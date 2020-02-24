@@ -69,6 +69,10 @@ public class Constants {
     public static final Map<Integer, String> sKeyMap = new HashMap<>();
     public static final Map<String, Integer> sKeyDefaultMap = new HashMap<>();
 
+    public static final String ACTION_UPDATE_SLIDER_POSITION
+            = "com.derp.device.DeviceSettings.UPDATE_SLIDER_POSITION";
+    public static final String EXTRA_SLIDER_POSITION = "position";
+
     // Broadcast extra: keycode mapping (int[]: key = gesture ID, value = keycode)
     static final String UPDATE_EXTRA_KEYCODE_MAPPING = "keycode_mappings";
     // Broadcast extra: assigned actions (int[]: key = gesture ID, value = action)
