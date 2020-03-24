@@ -1,2 +1,6 @@
 # Allow init to create vl53l1_socket
 allow init vl53l1_socket:sock_file create_file_perms;
+
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+allow init platform_app:binder call;
