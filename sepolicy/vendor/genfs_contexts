@@ -20,3 +20,8 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/notify_dim u:object_r:sysfs_fod:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/notify_fppress u:object_r:sysfs_fod:s0
 genfscon sysfs /devices/platform/vendor/vendor:infrared_pl u:object_r:vendor_sysfs_sensors:s0
+
+# vbswap device for zswap
+# apply zram context to avoid complicating policies
+genfscon sysfs /devices/virtual/block/vbswap0        u:object_r:sysfs_zram:s0
+genfscon sysfs /devices/virtual/block/vbswap0/uevent u:object_r:sysfs_zram_uevent:s0
