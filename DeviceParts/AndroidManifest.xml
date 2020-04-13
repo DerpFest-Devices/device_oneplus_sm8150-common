@@ -25,6 +25,7 @@
             android:name="org.omnirom.device.DeviceSettingsActivity"
             android:exported="false"
             android:label="@string/advanced_settings"
+            android:excludeFromRecents="true"
             android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
