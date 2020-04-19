@@ -88,6 +88,9 @@ persist.rcs.supported=0
 persist.vendor.naruto.light.support=true
 persist.vendor.sensors.enable.mag_filter=true
 
+# SurfaceFlinger
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # WiFi
 config.disable_rtt=true
 
