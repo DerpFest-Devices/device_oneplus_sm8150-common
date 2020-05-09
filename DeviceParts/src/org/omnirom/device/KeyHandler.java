@@ -597,6 +597,11 @@ public class KeyHandler implements DeviceKeyHandler {
                 dispatchMediaKeyWithWakeLockToAudioService(KeyEvent.KEYCODE_MEDIA_PREVIOUS);
             }
             return true;
+        } else if (value.equals(AppSelectListPreference.DOZE_PULSE_ENTRY)) {
+            mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
+            launchDozePulse();
+            OmniVibe.performHapticFeedbackLw(HapticFeedbackConstants.LONG_PRESS, false, mContext);
+            return true;
         }
         return false;
     }

@@ -61,6 +61,7 @@ public class AppSelectListPreference extends CustomDialogPreference {
     public static final String WAKE_ENTRY = "wake";
     public static final String BROWSE_SCROLL_DOWN_ENTRY = "browse_scroll_down";
     public static final String BROWSE_SCROLL_UP_ENTRY = "browse_scroll_up";
+    public static final String DOZE_PULSE_ENTRY = "doze_pulse";
 
     private AppSelectListAdapter mAdapter;
     private Drawable mAppIconDrawable;
@@ -225,6 +226,10 @@ public class AppSelectListPreference extends CustomDialogPreference {
                 R.drawable.ic_wakeup, WAKE_ENTRY);
         mInstalledPackages.add(0, wakeItem);
 
+        PackageItem pulseDoze = new PackageItem(getContext().getResources().getString(R.string.doze_pulse),
+                R.drawable.ic_wakeup, DOZE_PULSE_ENTRY);
+        mInstalledPackages.add(0, pulseDoze);
+
         PackageItem disabledItem = new PackageItem(getContext().getResources().getString(R.string.disabled_entry),
                 R.drawable.ic_disabled, DISABLED_ENTRY);
         mInstalledPackages.add(0, disabledItem);
@@ -303,6 +308,9 @@ public class AppSelectListPreference extends CustomDialogPreference {
                 mAppIconResourceId = R.drawable.ic_music_prev;
             } else if (name.equals(WAKE_ENTRY)) {
                 mTitle = getContext().getResources().getString(R.string.wake_entry);
+                mAppIconResourceId = R.drawable.ic_wakeup;
+            } else if (name.equals(DOZE_PULSE_ENTRY)) {
+                mTitle = getContext().getResources().getString(R.string.doze_pulse);
                 mAppIconResourceId = R.drawable.ic_wakeup;
             } else {
                 ComponentName componentName = ComponentName.unflattenFromString(name);
