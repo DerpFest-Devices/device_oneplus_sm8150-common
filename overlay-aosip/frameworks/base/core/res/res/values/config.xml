@@ -75,4 +75,7 @@
 
     <!-- Does the device have a notification led -->
     <bool name="config_hasNotificationLed">false</bool>
+
+    <!-- FOD icon dim-->
+    <bool name="config_targetUsesInKernelDimming">true</bool>
 </resources>
