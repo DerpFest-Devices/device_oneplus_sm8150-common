@@ -1540,6 +1540,10 @@ vendor/firmware/tp/LIMIT_19801_SY761_NEW.img
 vendor/firmware/tp/LIMIT_19861_SY761.img
 vendor/firmware/tp/LIMIT_19861_SY761_NEW.img
 
+# Translation
+vendor/lib/vendor.oneplus.hardware.translation@1.0.so
+vendor/lib64/vendor.oneplus.hardware.translation@1.0.so
+
 # Trusted User Interface
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
