@@ -480,6 +480,7 @@ low_ram=`getprop ro.config.low_ram`
 if [ "$ProductName" == "msmnile" ]; then
       # Enable ZRAM
       configure_zram_parameters
+
       configure_read_ahead_kb_values
       echo 0 > /proc/sys/vm/page-cluster
       echo 100 > /proc/sys/vm/swappiness
@@ -4253,7 +4254,7 @@ case "$target" in
 	# cpuset parameters
 	echo 0-3 > /dev/cpuset/background/cpus
 	echo 0-3 > /dev/cpuset/system-background/cpus
-
+	echo 0-3 > /dev/cpuset/display/cpus
 	echo 0-6 > /dev/cpuset/foreground/cpus
 
 	# Turn off scheduler boost at the end
@@ -4271,14 +4272,14 @@ case "$target" in
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
+	echo 1555200 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
 	# configure governor settings for gold+ cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
+	echo 1555200 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 
 	# configure input boost settings
@@ -4287,8 +4288,8 @@ case "$target" in
 	# echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
 	# echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
 	# else VENDOR_EDIT
-	echo "0:1555200" > /sys/module/cpu_boost/parameters/input_boost_freq
-	echo 700 > /sys/module/cpu_boost/parameters/input_boost_ms
+	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
+	echo 200 > /sys/module/cpu_boost/parameters/input_boost_ms
 	# endif VENDOR_EDIT
 
 	# ifdef VENDOR_EDIT
@@ -4311,9 +4312,6 @@ case "$target" in
         #yankelong@BSP, 2019/5/8/, add for Enable ufs performance.
         echo 0 > /sys/class/scsi_host/host0/../../../clkscale_enable
         #endif VENDOR_EDIT
-
-        echo 0-3 > /dev/cpuset/background/cpus
-        echo 0-3 > /dev/cpuset/system-background/cpus
 
         # Enable oom_reaper
 	if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
