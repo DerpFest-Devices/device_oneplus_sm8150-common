@@ -69,6 +69,9 @@ ro.vendor.qti.sys.fw.bservice_age=5000
 ro.vendor.qti.sys.fw.bservice_enable=true
 ro.vendor.qti.sys.fw.bservice_limit=8
 
+# Navbar - gestural
+ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+
 # Netflix
 ro.netflix.bsp_rev=Q855-16947-1
 
