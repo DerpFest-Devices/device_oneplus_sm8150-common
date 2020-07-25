@@ -33,8 +33,8 @@
     <string name="touchscreen_gesture_single_tap_title">Einfaches Tippen</string>
     <string name="touchscreen_gesture_down_arrow_title">Zeichne ein \"V\"</string>
     <string name="touchscreen_gesture_up_arrow_title">Zeichne ein \"Λ\"</string>
-    <string name="touchscreen_gesture_right_arrow_title">Zeichne ein \"&lt;\"</string>
-    <string name="touchscreen_gesture_left_arrow_title">Zeichne ein \"&gt;\"</string>
+    <string name="touchscreen_gesture_left_arrow_title">Zeichne ein \"&lt;\"</string>
+    <string name="touchscreen_gesture_right_arrow_title">Zeichne ein \"&gt;\"</string>
     <string name="touchscreen_gesture_letter_c_title">Zeichne den Buchstaben \"C\"</string>
     <string name="touchscreen_gesture_letter_e_title">Zeichne den Buchstaben \"E\"</string>
     <string name="touchscreen_gesture_letter_o_title">Zeichne den Buchstaben \"O\"</string>
