@@ -30,7 +30,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
+import android.content.res.Resources.Theme;
 import android.database.ContentObserver;
+import android.graphics.drawable.Drawable;
+import android.graphics.PorterDuff.Mode;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -55,6 +58,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.provider.Settings.Secure;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.HapticFeedbackConstants;
 
@@ -63,6 +67,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.widget.Toast;
+
+import androidx.core.graphics.drawable.DrawableCompat;
+
 import com.android.internal.os.DeviceKeyHandler;
 import org.omnirom.device.PackageUtils;
 import com.android.internal.util.ArrayUtils;
@@ -327,7 +334,7 @@ public class KeyHandler implements DeviceKeyHandler {
                     boolean vibrate = state.contains("USB-HOST=0");
                     if (DEBUG) Log.i(TAG, "state = " + state + " Got ringing = " + ringing + ", silent = " + silent + ", vibrate = " + vibrate);
                     if(ringing && !silent && !vibrate)
-                        doHandleSliderAction(2, 175);
+                        doHandleSliderAction(2, 180);
                     if(silent && !ringing && !vibrate)
                         doHandleSliderAction(0, 90);
                     if(vibrate && !silent && !ringing)
@@ -518,38 +525,55 @@ public class KeyHandler implements DeviceKeyHandler {
 
     private void doHandleSliderAction(int position, int yOffset) {
         int action = getSliderAction(position);
-        if ( action == 0) {
-            mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
-            mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
-            showToast(R.string.toast_ringer, Toast.LENGTH_SHORT, yOffset);
-            disableTorch();
-        } else if (action == 1) {
-            mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
-            mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_VIBRATE);
-            showToast(R.string.toast_vibrate, Toast.LENGTH_SHORT, yOffset);
-            disableTorch();
-        } else if (action == 2) {
-            mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
-            mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_SILENT);
-            showToast(R.string.toast_silent, Toast.LENGTH_SHORT, yOffset);
-            disableTorch();
-        } else if (action == 3) {
-            mNoMan.setZenMode(ZEN_MODE_IMPORTANT_INTERRUPTIONS, null, TAG);
-            mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
-            showToast(R.string.toast_dnd, Toast.LENGTH_SHORT, yOffset);
-            disableTorch();
-        } else if (action == 4) {
-            mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
-            mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
-            showToast(R.string.toast_flash, Toast.LENGTH_SHORT, yOffset);
-            if (mProxyIsNear && mUseProxiCheck) {
-                return;
-            } else {
-                mToggleTorch = true;
-                mTorchState = true;
-                toggleTorch();
-            }
+        int stringId;
+        Drawable icon;
+        switch (action) {
+            default:
+            case 0:
+                mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
+                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+                stringId = R.string.toast_ringer;
+                icon = mResContext.getResources().getDrawable(R.drawable.ic_volume_ringer, mContext.getTheme());
+                disableTorch();
+                break;
+            case 1:
+                mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
+                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_VIBRATE);
+                stringId = R.string.toast_vibrate;
+                icon = mResContext.getResources().getDrawable(R.drawable.ic_volume_ringer_vibrate, mContext.getTheme());
+                disableTorch();
+                break;
+            case 2:
+                mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
+                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_SILENT);
+                stringId = R.string.toast_silent;
+                icon = mResContext.getResources().getDrawable(R.drawable.ic_volume_ringer_mute, mContext.getTheme());
+                disableTorch();
+                break;
+            case 3:
+                mNoMan.setZenMode(ZEN_MODE_IMPORTANT_INTERRUPTIONS, null, TAG);
+                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+                stringId = R.string.toast_dnd;
+                icon = mResContext.getResources().getDrawable(R.drawable.ic_qs_dnd_on, mContext.getTheme());
+                disableTorch();
+                break;
+            case 4:
+                mNoMan.setZenMode(ZEN_MODE_OFF, null, TAG);
+                mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+                stringId = R.string.toast_flash;
+                icon = mResContext.getResources().getDrawable(R.drawable.ic_lock_torch, mContext.getTheme());
+                if (mProxyIsNear && mUseProxiCheck) {
+                    return;
+                } else {
+                    mToggleTorch = true;
+                    mTorchState = true;
+                    toggleTorch();
+                }
+                break;
         }
+
+        icon.setColorFilter(getAccentColor(), Mode.MULTIPLY);
+        showToast(stringId, Toast.LENGTH_SHORT, yOffset, icon);
     }
 
     private void disableTorch() {
@@ -574,6 +598,12 @@ public class KeyHandler implements DeviceKeyHandler {
                 // do nothing.
             }
         }
+    }
+
+    private int getAccentColor() {
+        TypedValue tv = new TypedValue();
+        mSysUiContext.getTheme().resolveAttribute(android.R.attr.colorAccent, tv, true);
+        return tv.data;
     }
 
     private Intent createIntent(String value) {
