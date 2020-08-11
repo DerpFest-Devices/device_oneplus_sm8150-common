@@ -32,6 +32,7 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.content.res.Resources.Theme;
 import android.database.ContentObserver;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.PorterDuff.Mode;
 import android.hardware.Sensor;
@@ -92,6 +93,7 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final int GESTURE_WAKELOCK_DURATION = 2000;
     private static final String DT2W_CONTROL_PATH = "/proc/touchpanel/double_tap_enable";
     private static final String SINGLE_TAP_CONTROL_PATH = "/proc/touchpanel/single_tap_enable";
+    private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
 
     private static final int GESTURE_CIRCLE = 250;
     private static final int GESTURE_UP_ARROW = 252;
@@ -601,9 +603,13 @@ public class KeyHandler implements DeviceKeyHandler {
     }
 
     private int getAccentColor() {
-        TypedValue tv = new TypedValue();
-        mSysUiContext.getTheme().resolveAttribute(android.R.attr.colorAccent, tv, true);
-        return tv.data;
+        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
+        if (colorVal == "-1") {
+            TypedValue tv = new TypedValue();
+            mSysUiContext.getTheme().resolveAttribute(android.R.attr.colorAccent, tv, true);
+            return tv.data;
+        }
+        return Color.parseColor("#" + colorVal);
     }
 
     private Intent createIntent(String value) {
