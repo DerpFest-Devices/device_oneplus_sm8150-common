@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="category_gestures_title">端末ジェスチャー</string>
+    <string name="category_vibrator">振動</string>
+    <string name="vib_strength_title_head">強さ</string>
+    <string name="vib_strength_summary_head">振動の強さを決定する</string>
+    <string name="vib_test">テスト</string>
+    <string name="advanced_settings">高度な設定</string>
+    <string name="category_slider">スライダー</string>
+    <string name="slider_mode_title">スライダーモード</string>
+    <string name="buttons_title">ボタン</string>
+    <string name="swap_back_recents_title">戻るとアプリ履歴のボタンを交換する</string>
+    <string name="graphics_title">グラフィックス</string>
+    <string name="srgb_mode_title">sRGB モード</string>
+    <string name="dcd_mode_title">DC ディミング</string>
+    <string name="dcd_mode_summary">低輝度時の画面のちらつきを減らす</string>
+    <string name="hbm_mode_title">高輝度モード</string>
+    <string name="oneplus_mode_title">OnePlus モード</string>
+    <string name="proxi_summary_head_new">ジェスチャーの操作に近接センサーを確認する</string>
+    <string name="proxi_title_head">近接センサーの確認</string>
+    <string name="off_screen_gesture_feedback_summary_head">ジェスチャーの振動フィードバックを有効にする</string>
+    <string name="off_screen_gesture_feedback_title_head">振動フィードバック</string>
+    <string name="slider_mode_off">OFF</string>
+    <string name="slider_mode_flashlight">フラッシュライト</string>
+    <string name="slider_mode_vibrate">振動</string>
+    <string name="slider_mode_silent">サイレント</string>
+    <string name="slider_mode_priority">優先のみ</string>
+    <string name="slider_mode_alarm">アラームのみ</string>
+    <string name="slider_mode_zen">マナーモード</string>
+    <string name="slider_mode_title_top">上部</string>
+    <string name="slider_mode_title_center">中央</string>
+    <string name="slider_mode_title_bottom">下部</string>
+    <string name="wide_mode_title_new">ワイド色モード</string>
+    <string name="dci_mode_title_new">DCI-P3 モード</string>
+    <string name="Night_mode_title">夜間モード</string>
+    <string name="otg_switch_summary">USB-OTG のサポートを切り替える</string>
+    <string name="otg_switch_title">USB-OTG サポート</string>
+    <string name="audio_title">Dolby Atmos</string>
+    <string name="dolby_title">設定</string>
+    <string name="dolby_summary">エフェクトを設定する</string>
+    <string name="enable_dolby_summary">Dolby Atmos を切り替える</string>
+    <string name="enable_dolby_title">有効</string>
+    <string name="enable_dolby_info">エフェクト切り替えには再起動が必要です</string>
+    <string name="choose_app">アプリの選択</string>
+    <string name="category_double_swipe_gesture">II ジェスチャー</string>
+    <string name="offscreen_gesture_title">画面消灯ジェスチャー</string>
+    <string name="category_circle_gesture">O ジェスチャー</string>
+    <string name="category_down_arrow_gesture">A ジェスチャー</string>
+    <string name="category_up_arrow_gesture">V ジェスチャー</string>
+    <string name="category_left_arrow_gesture">&lt; ジェスチャー</string>
+    <string name="category_right_arrow_gesture">&gt; ジェスチャー</string>
+    <string name="category_gestures_summary">ジェスチャー動作を設定する</string>
+    <string name="torch_entry">フラッシュライト</string>
+    <string name="disabled_entry">無効</string>
+    <string name="camera_entry">カメラ</string>
+    <string name="music_play_entry">音楽の再生/停止</string>
+    <string name="music_prev_entry">前のトラック</string>
+    <string name="music_next_entry">次のトラック</string>
+    <string name="volume_up">音量を上げる</string>
+    <string name="volume_down">音量を下げる</string>
+    <string name="browse_scroll_up">上にスクロール</string>
+    <string name="browse_scroll_down">下にスクロール</string>
+    <string name="navigate_back">戻る</string>
+    <string name="navigate_home">ホーム</string>
+    <string name="navigate_recent">アプリ履歴</string>
+    <string name="not_ready_summary">処理しています...</string>
+    <string name="resolve_failed_summary">アプリの処理に失敗しました</string>
+    <string name="category_s_gesture">S スワイプ</string>
+    <string name="category_m_gesture">M スワイプ</string>
+    <string name="category_w_gesture">W スワイプ</string>
+    <string name="doze_category_title">アンビエント表示</string>
+    <string name="doze_category_summary">通知を受け取った時も画面をスリープ状態のままにする</string>
+    <string name="wave_check_summary">手を振った時の通知の点滅</string>
+    <string name="wave_check_title">手を振る</string>
+    <string name="tilt_check_summary">端末を持ち上げた時の通知の点滅</string>
+    <string name="tilt_check_title">持ち上げ</string>
+    <string name="pocket_check_summary">ポケットから出した時の通知の点滅</string>
+    <string name="pocket_check_title">ポケット</string>
+    <string name="ambient_display_enable">ディスプレイ設定でアンビエント表示を有効にしなければなりません</string>
+    <string name="panel_category_title">パネルモード</string>
+    <string name="panel_category_summary">パネルの色補正のモード</string>
+    <string name="off_mode_title">OFF</string>
+    <string name="tile_panel_mode">パネルモード</string>
+    <string name="tile_hbm_mode">高輝度モード</string>
+    <string name="wake_entry">スリープ解除</string>
+    <string name="single_tap_title">シングルタップ</string>
+    <string name="single_tap_summary">シングルタップでアンビエント表示する</string>
+    <string name="refresh_title">画面の更新</string>
+    <string name="tile_refresh_rate">リフレッシュレート</string>
+    <string name="auto_refresh_rate_summary">アプリにリフレッシュレートを決定させる</string>
+    <string name="auto_refresh_rate_title">自動リフレッシュモード</string>
+    <string name="refresh_rate_summary">60Hz から 90Hz の間で最大リフレッシュレートを選んで下さい</string>
+    <string name="refresh_rate_title">最大リフレッシュレートを 90Hz に強制化</string>
+    <string name="refresh_rate_warning">強制 90Hz 化はかなりのバッテリー消費を伴います</string>
+    <string name="fps_info_title">FPS オーバーレイ</string>
+    <string name="fps_info_summary">現在 FSP をオーバーレイ表示する</string>
+    <string name="panel_mode_info">パネルモード無効化には再起動が必要です</string>
+</resources>

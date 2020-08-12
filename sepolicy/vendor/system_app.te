@@ -15,3 +15,8 @@ allow system_app sysfs_graphics:file { getattr open read };
 
 # allow system_app to interact with pasr hal
 hal_client_domain(system_app, hal_pasrmanager)
+
+allow system_app omni_sysfs_drm:file rw_file_perms;
+
+allow system_app proc_touchpanel:dir search;
+allow system_app proc_touchpanel:file { open write };

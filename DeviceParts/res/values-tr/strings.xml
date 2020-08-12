@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="category_gestures_title">Cihaz hareketleri</string>
+    <string name="category_vibrator">Titreşim motoru</string>
+    <string name="vib_strength_title_head">Şiddet</string>
+    <string name="vib_strength_summary_head">Titreşim motorunun şiddetini tayin eder</string>
+    <string name="vib_test">Tecrübe edin</string>
+    <string name="advanced_settings">İleri seviye</string>
+    <string name="category_slider">Kaydırak</string>
+    <string name="slider_mode_title">Kaydırak modu</string>
+    <string name="buttons_title">Düğmeler</string>
+    <string name="swap_back_recents_title">Geri ve son uygulamalar düğmesini değiş tokuş et</string>
+    <string name="graphics_title">Grafikler</string>
+    <string name="srgb_mode_title">sRGB modu</string>
+    <string name="dcd_mode_title">Doğru Akım Azaltması</string>
+    <string name="dcd_mode_summary">Düşük parlaklıktaki ekran ışığı titremelerini azaltır</string>
+    <string name="hbm_mode_title">Yüksek parlaklık modu</string>
+    <string name="oneplus_mode_title">OnePlus modu</string>
+    <string name="proxi_summary_head_new">Hareketleri ele almak üzere yakınlık sensörünü yoklar</string>
+    <string name="proxi_title_head">Yakınlık yoklaması</string>
+    <string name="off_screen_gesture_feedback_summary_head">Hareketler için temas geri bildirimini devreye sok</string>
+    <string name="off_screen_gesture_feedback_title_head">Temas geri bildirimi</string>
+    <string name="slider_mode_off">Kapalı</string>
+    <string name="slider_mode_flashlight">El Feneri</string>
+    <string name="slider_mode_vibrate">Titret</string>
+    <string name="slider_mode_silent">Sessiz</string>
+    <string name="slider_mode_priority">Sadece öncelik</string>
+    <string name="slider_mode_alarm">Sadece alarmlar</string>
+    <string name="slider_mode_zen">Rahatsız etmeyin</string>
+    <string name="slider_mode_title_top">Üstte</string>
+    <string name="slider_mode_title_center">Merkezde</string>
+    <string name="slider_mode_title_bottom">Altta</string>
+    <string name="wide_mode_title_new">Geniş renk modu</string>
+    <string name="dci_mode_title_new">DCI-P3 modu</string>
+    <string name="Night_mode_title">Gece modu</string>
+    <string name="otg_switch_summary">USB-OTG desteğini devreye sokar veyâ devre dışı bırakır</string>
+    <string name="otg_switch_title">USB-OTG desteği</string>
+    <string name="audio_title">Dolby Atmos</string>
+    <string name="dolby_title">Ayarla</string>
+    <string name="dolby_summary">Efektleri seçin ve ayarlayın</string>
+    <string name="enable_dolby_summary">Dolby Atmos\'u devreye sokar veyâ devre dışı bırakır</string>
+    <string name="enable_dolby_title">Devreye sok</string>
+    <string name="enable_dolby_info">Devreye sokmanın ve devre dışı bırakmanın etkili olması için tekrar başlatma gerekmektedir.</string>
+    <string name="choose_app">Uygulama seçin</string>
+    <string name="category_double_swipe_gesture">II hareketi</string>
+    <string name="offscreen_gesture_title">Kapalı ekran hareketleri</string>
+    <string name="category_circle_gesture">O hareketi</string>
+    <string name="category_down_arrow_gesture">A hareketi</string>
+    <string name="category_up_arrow_gesture">V hareketi</string>
+    <string name="category_left_arrow_gesture">&lt; hareketi</string>
+    <string name="category_right_arrow_gesture">&gt; hareketi</string>
+    <string name="category_gestures_summary">Hareket eylemlerini ayarlayın</string>
+    <string name="torch_entry">El Feneri</string>
+    <string name="disabled_entry">Devre dışı</string>
+    <string name="camera_entry">Kamera</string>
+    <string name="music_play_entry">Müziği çal veyâ duraklat</string>
+    <string name="music_prev_entry">Evvelki şarkı</string>
+    <string name="music_next_entry">Sonraki şarkı</string>
+    <string name="volume_up">Ses seviyesini artır</string>
+    <string name="volume_down">Ses seviyesini azalt</string>
+    <string name="browse_scroll_up">Yukarı kaydır</string>
+    <string name="browse_scroll_down">Aşağı kaydır</string>
+    <string name="navigate_back">Geri</string>
+    <string name="navigate_home">Ana ekran</string>
+    <string name="navigate_recent">Son uygulamalar</string>
+    <string name="not_ready_summary">Tahlîl ediliyor...</string>
+    <string name="resolve_failed_summary">Uygulama tahlîl edilemedi</string>
+    <string name="category_s_gesture">S hareketi</string>
+    <string name="category_m_gesture">M hareketi</string>
+    <string name="category_w_gesture">W hareketi</string>
+    <string name="doze_category_title">Fa\'âl ekran</string>
+    <string name="doze_category_summary">Bildirim aldığınızda ekranı uyandırır</string>
+    <string name="wave_check_summary">Bildirimleri el sallandığı zaman gösterir</string>
+    <string name="wave_check_title">El sallama</string>
+    <string name="tilt_check_summary">Bildirimleri cihaz ele alındığı zaman gösterir</string>
+    <string name="tilt_check_title">Ele alma</string>
+    <string name="pocket_check_summary">Bildirimleri cihaz cepten çıkarıldığı zaman gösterir</string>
+    <string name="pocket_check_title">Cep</string>
+    <string name="ambient_display_enable">Ekran ayarlarındaki fa\'âl ekran devreye sokulmalıdır</string>
+    <string name="panel_category_title">Panel modları</string>
+    <string name="panel_category_summary">Panel rengini düzeltme modları</string>
+    <string name="off_mode_title">Kapalı</string>
+    <string name="tile_panel_mode">Panel modları</string>
+    <string name="tile_hbm_mode">Yüksek parlaklık modları</string>
+    <string name="wake_entry">Uyanma</string>
+    <string name="single_tap_title">Tek dokunuş</string>
+    <string name="single_tap_summary">Fa\'âl ekranı tek dokunuşta gösterir</string>
+    <string name="refresh_title">Ekran yenilemesi</string>
+    <string name="tile_refresh_rate">Ekran yenilemesi oranı</string>
+    <string name="auto_refresh_rate_summary">Uygulamaların hangi oranı kullanacaklarına karar vermelerine müsaade eder</string>
+    <string name="auto_refresh_rate_title">Otomatik yenileme modu</string>
+    <string name="refresh_rate_summary">Azami 60Hz veya 90Hz yenileme arasından bir tercihte bulunun</string>
+    <string name="refresh_rate_title">Azami 90 Hz yenileme oranına mecbur et</string>
+    <string name="refresh_rate_warning">Mecburen 90Hz kullanmak pil ömrünü önemli ölçüde etkileyecektir</string>
+    <string name="fps_info_title">FPS bilgisi</string>
+    <string name="fps_info_summary">Saniye başına düşen mevcut kare bilgisine sahip bir yardımcı grafik gösterir</string>
+    <string name="panel_mode_info">Panel modunu devre dışı bırakmak tekrar başlatmayı gerektirir.</string>
+</resources>

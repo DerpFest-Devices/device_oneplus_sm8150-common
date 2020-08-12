@@ -7,3 +7,5 @@ init_daemon_domain(hal_display_default)
 # Allow hal_display_default to read/write aod/fod sysfs nodes
 allow hal_display_default sysfs_aod:file rw_file_perms;
 allow hal_display_default sysfs_fod:file rw_file_perms;
+
+allow hal_display_default omni_sysfs_drm:file rw_file_perms;

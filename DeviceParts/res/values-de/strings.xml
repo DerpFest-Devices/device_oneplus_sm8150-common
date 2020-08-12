@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="category_gestures_title">Gerätegesten</string>
+    <string name="category_vibrator">Vibrator</string>
+    <string name="vib_strength_title_head">Stärke</string>
+    <string name="vib_strength_summary_head">Vibrationsstärke festlegen</string>
+    <string name="vib_test">Test</string>
+    <string name="advanced_settings">Erweitert</string>
+    <string name="category_slider">Regler</string>
+    <string name="slider_mode_title">Regler-Modus</string>
+    <string name="buttons_title">Tasten</string>
+    <string name="swap_back_recents_title">Zurück- und Verlauf-Taste tauschen</string>
+    <string name="graphics_title">Grafik</string>
+    <string name="srgb_mode_title">sRGB-Modus</string>
+    <string name="dcd_mode_title">DC-Dimmen</string>
+    <string name="dcd_mode_summary">Reduziert die Bildschirmflacker bei niedriger Helligkeit</string>
+    <string name="hbm_mode_title">Modus für max. Helligkeit</string>
+    <string name="oneplus_mode_title">OnePlus Modus</string>
+    <string name="proxi_summary_head_new">Näherungssensor für die Nutzung von Gesten überprüfen</string>
+    <string name="proxi_title_head">Näherungssensor überprüfen</string>
+    <string name="off_screen_gesture_feedback_summary_head">Haptisches Feedback für Gesten aktivieren</string>
+    <string name="off_screen_gesture_feedback_title_head">Haptisches Feedback</string>
+    <string name="slider_mode_off">Aus</string>
+    <string name="slider_mode_flashlight">Taschenlampe</string>
+    <string name="slider_mode_vibrate">Vibrieren</string>
+    <string name="slider_mode_silent">Lautlos</string>
+    <string name="slider_mode_priority">Nur Wichtige</string>
+    <string name="slider_mode_alarm">Nur Wecker</string>
+    <string name="slider_mode_zen">Nicht stören</string>
+    <string name="slider_mode_title_top">Position oben</string>
+    <string name="slider_mode_title_center">Position in der Mitte</string>
+    <string name="slider_mode_title_bottom">Position unten</string>
+    <string name="wide_mode_title_new">Breiter Farbmodus</string>
+    <string name="dci_mode_title_new">DCI-P3-Modus</string>
+    <string name="Night_mode_title">Nachtmodus</string>
+    <string name="otg_switch_summary">USB-OTG-Unterstützung ein-/ausschalten</string>
+    <string name="otg_switch_title">USB-OTG-Unterstützung</string>
+    <string name="audio_title">Dolby Atmos</string>
+    <string name="dolby_title">Konfigurieren</string>
+    <string name="dolby_summary">Effekte auswählen und konfigurieren</string>
+    <string name="enable_dolby_summary">Dolby Atmos aktivieren/deaktivieren</string>
+    <string name="enable_dolby_title">Aktivieren</string>
+    <string name="enable_dolby_info">Aktivieren und deaktivieren erfordert einen Neustart, um wirksam zu werden.</string>
+    <string name="choose_app">App wählen</string>
+    <string name="category_double_swipe_gesture">II-Geste</string>
+    <string name="offscreen_gesture_title">Gesten bei ausgeschaltetem Bildschirm</string>
+    <string name="category_circle_gesture">O-Geste</string>
+    <string name="category_down_arrow_gesture">V-Geste</string>
+    <string name="category_up_arrow_gesture">A-Geste</string>
+    <string name="category_left_arrow_gesture">&lt;-Geste</string>
+    <string name="category_right_arrow_gesture">&gt;-Geste</string>
+    <string name="category_gestures_summary">Gestenaktionen konfigurieren</string>
+    <string name="torch_entry">Taschenlampe</string>
+    <string name="disabled_entry">Deaktiviert</string>
+    <string name="camera_entry">Kamera</string>
+    <string name="music_play_entry">Musik abspielen/pausieren</string>
+    <string name="music_prev_entry">Vorheriger Titel</string>
+    <string name="music_next_entry">Nächster Titel</string>
+    <string name="volume_up">Lautstärke erhöhen</string>
+    <string name="volume_down">Lautstärke verringern</string>
+    <string name="browse_scroll_up">Nach oben scrollen</string>
+    <string name="browse_scroll_down">Nach unten scrollen</string>
+    <string name="navigate_back">Zurück</string>
+    <string name="navigate_home">Startbildschirm</string>
+    <string name="navigate_recent">Anwendungsverlauf</string>
+    <string name="not_ready_summary">Lösen...</string>
+    <string name="resolve_failed_summary">App lösen fehlgeschlagen</string>
+    <string name="category_s_gesture">S Geste</string>
+    <string name="category_m_gesture">M Geste</string>
+    <string name="category_w_gesture">W Geste</string>
+    <string name="doze_category_title">Inaktivitätsdisplay</string>
+    <string name="doze_category_summary">Das Display einschalten, wenn eine Benachrichtigung empfangen wurde</string>
+    <string name="wave_check_summary">Benachrichtigungen pulsieren, wenn mit der Hand gewunken wird</string>
+    <string name="wave_check_title">Winken</string>
+    <string name="tilt_check_summary">Benachrichtigungen pulsieren, wenn das Gerät hochgenommen wird</string>
+    <string name="tilt_check_title">Aufheben</string>
+    <string name="pocket_check_summary">Benachrichtigungen pulsiren, wenn das Gerät aus der Tasche genommen wird</string>
+    <string name="pocket_check_title">Tasche</string>
+    <string name="ambient_display_enable">Inaktivitätsdisplay muss in den Display-Einstellungen aktiviert sein</string>
+    <string name="panel_category_title">Panel-Modi</string>
+    <string name="panel_category_summary">Modi für die Farbkorrektur des Panel</string>
+    <string name="off_mode_title">Aus</string>
+    <string name="tile_panel_mode">Panel-Modi</string>
+    <string name="tile_hbm_mode">Modus für max. Helligkeit</string>
+    <string name="wake_entry">Aufwachen</string>
+    <string name="single_tap_title">Einmaliges tippen</string>
+    <string name="single_tap_summary">Inaktivitätsdisplay bei einmaligem Tippen anzeigen</string>
+    <string name="refresh_title">Bildschirm Aktualisierung</string>
+    <string name="tile_refresh_rate">Bildschirm Aktualisierungsrate</string>
+    <string name="auto_refresh_rate_summary">Apps entscheiden lassen, welche Aktualisierungsrate verwendet werden soll</string>
+    <string name="auto_refresh_rate_title">Automatischer Aktualisierungsmodus</string>
+    <string name="refresh_rate_summary">Wählen Sie zwischen 60Hz oder 90Hz Peak-Aktualisierungen</string>
+    <string name="refresh_rate_title">90Hz Peak Aktualisierungsrate erzwingen</string>
+    <string name="refresh_rate_warning">Die Verwendung von 90Hz wird die Akkulaufzeit erheblich beeinträchtigen</string>
+    <string name="fps_info_title">FPS overlay</string>
+    <string name="fps_info_summary">Zeige eine Overlay mit aktuellen Frames pro Sekunde</string>
+    <string name="panel_mode_info">Panel Modus deaktivieren erfordert einen Neustart.</string>
+</resources>

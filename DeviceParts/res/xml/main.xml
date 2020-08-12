@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2014-2016 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="gesture_category"
+        android:title="@string/category_gestures_title"
+        android:summary="@string/category_gestures_summary"
+        android:persistent="false" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="org.omnirom.device"
+                android:targetClass="org.omnirom.device.GestureSettingsActivity" />
+    </Preference>
+
+    <Preference
+        android:key="doze_category"
+        android:title="@string/doze_category_title"
+        android:summary="@string/doze_category_summary"
+        android:persistent="false" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="org.omnirom.device"
+                android:targetClass="org.omnirom.device.DozeSettingsActivity" />
+    </Preference>
+
+    <PreferenceCategory
+        android:title="@string/category_vibrator">
+        <org.omnirom.device.VibratorStrengthPreference
+            android:key="vib_strength"
+            android:title="@string/vib_strength_title_head"
+            android:summary="@string/vib_strength_summary_head"
+            android:persistent="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/category_slider">
+        <ListPreference
+            android:key="slider_mode_top"
+            android:title="@string/slider_mode_title_top"
+            android:entries="@array/slider_key_action_entries"
+            android:entryValues="@array/slider_key_action_values"
+            android:persistent="false" />
+        <ListPreference
+            android:key="slider_mode_center"
+            android:title="@string/slider_mode_title_center"
+            android:entries="@array/slider_key_action_entries"
+            android:entryValues="@array/slider_key_action_values"
+            android:persistent="false" />
+        <ListPreference
+            android:key="slider_mode_bottom"
+            android:title="@string/slider_mode_title_bottom"
+            android:entries="@array/slider_key_action_entries"
+            android:entryValues="@array/slider_key_action_values"
+            android:persistent="false" />
+    </PreferenceCategory>
+
+<!--    <PreferenceCategory
+        android:title="@string/buttons_title"
+        android:key="buttons_category">
+        <SwitchPreference
+            android:key="swap_back_recents"
+            android:summary="@string/swap_back_recents_summary"
+            android:title="@string/swap_back_recents_title"
+            android:persistent="false" />
+    </PreferenceCategory>
+-->
+    <PreferenceCategory
+        android:key="audio"
+        android:title="@string/audio_title">
+        <SwitchPreference
+            android:key="enable_dolby_atmos"
+            android:summary="@string/enable_dolby_summary"
+            android:title="@string/enable_dolby_title"
+            android:defaultValue="true"
+            android:persistent="true" />
+        <Preference
+            android:key="dolby_atmos"
+            android:title="@string/dolby_title"
+            android:summary="@string/dolby_summary"
+            android:dependency="enable_dolby_atmos"
+            android:persistent="false" >
+            <intent
+                 android:targetPackage="com.oneplus.sound.tuner"
+                 android:targetClass="com.oneplus.sound.tuner.panoramic.DolbyPanoramicSoundActivity" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_info_outline_24dp"
+            android:persistent="false"
+            android:summary="@string/enable_dolby_info" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="refresh"
+        android:title="@string/refresh_title">
+        <SwitchPreference
+            android:key="auto_refresh_rate"
+            android:summary="@string/auto_refresh_rate_summary"
+            android:title="@string/auto_refresh_rate_title"
+            android:persistent="true" />
+        <SwitchPreference
+            android:key="refresh_rate"
+            android:summary="@string/refresh_rate_summary"
+            android:title="@string/refresh_rate_title"
+            android:persistent="false" />
+        <Preference
+            android:icon="@drawable/ic_info_outline_24dp"
+            android:persistent="false"
+            android:summary="@string/refresh_rate_warning" />
+        <SwitchPreference
+            android:key="fps_info"
+            android:title="@string/fps_info_title"
+            android:summary="@string/fps_info_summary"
+            android:persistent="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="graphics"
+        android:title="@string/graphics_title">
+        <SwitchPreference
+            android:key="dcd"
+            android:summary="@string/dcd_mode_summary"
+            android:title="@string/dcd_mode_title" />
+        <SwitchPreference
+            android:key="hbm"
+            android:summary="@string/hbm_mode_summary"
+            android:title="@string/hbm_mode_title"
+            android:persistent="false" />
+        <Preference
+            android:key="panel_category"
+            android:title="@string/panel_category_title"
+            android:summary="@string/panel_category_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.omnirom.device"
+                    android:targetClass="org.omnirom.device.PanelSettingsActivity" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

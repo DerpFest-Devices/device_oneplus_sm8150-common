@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="category_gestures_title">Жесты устройства</string>
+    <string name="category_vibrator">Вибрация</string>
+    <string name="vib_strength_title_head">Сила</string>
+    <string name="vib_strength_summary_head">Настройте силу вибрации</string>
+    <string name="vib_test">Проверить</string>
+    <string name="advanced_settings">Дополнительно</string>
+    <string name="category_slider">Ползунок</string>
+    <string name="slider_mode_title">Режим ползунка</string>
+    <string name="buttons_title">Кнопки</string>
+    <string name="swap_back_recents_title">Поменять местами кнопки \"Назад\" и \"Недавние\"</string>
+    <string name="graphics_title">Оформление</string>
+    <string name="srgb_mode_title">Режим sRGB</string>
+    <string name="dcd_mode_title">DC затемнение</string>
+    <string name="dcd_mode_summary">Уменьшить мерцание экрана при низкой яркости</string>
+    <string name="hbm_mode_title">Режим повышенной яркости</string>
+    <string name="oneplus_mode_title">Режим OnePlus</string>
+    <string name="proxi_summary_head_new">Проверить датчик приближения для обработки жестов</string>
+    <string name="proxi_title_head">Проверка датчика приближения</string>
+    <string name="off_screen_gesture_feedback_summary_head">Включить виброотклик при использовании жестов</string>
+    <string name="off_screen_gesture_feedback_title_head">Виброотклик</string>
+    <string name="slider_mode_off">Выкл.</string>
+    <string name="slider_mode_flashlight">Фонарик</string>
+    <string name="slider_mode_vibrate">Вибрация</string>
+    <string name="slider_mode_silent">Без звука</string>
+    <string name="slider_mode_priority">Только важные</string>
+    <string name="slider_mode_alarm">Только будильники</string>
+    <string name="slider_mode_zen">Не беспокоить</string>
+    <string name="slider_mode_title_top">Верхнее положение</string>
+    <string name="slider_mode_title_center">Среднее положение</string>
+    <string name="slider_mode_title_bottom">Нижнее положение</string>
+    <string name="wide_mode_title_new">Режим широкого цвета</string>
+    <string name="dci_mode_title_new">Режим DCI-P3</string>
+    <string name="Night_mode_title">Ночной режим</string>
+    <string name="otg_switch_summary">Включить/выключить поддержку USB-OTG</string>
+    <string name="otg_switch_title">Поддержка USB-OTG</string>
+    <string name="audio_title">Dolby Atmos</string>
+    <string name="dolby_title">Настроить</string>
+    <string name="dolby_summary">Выбрать и настроить эффекты</string>
+    <string name="enable_dolby_summary">Включить/выключить Dolby Atmos</string>
+    <string name="enable_dolby_title">Включено</string>
+    <string name="enable_dolby_info">Чтобы включение и отключение вступили в силу, требуется перезагрузка.</string>
+    <string name="choose_app">Выбрать приложение</string>
+    <string name="category_double_swipe_gesture">Жест ll</string>
+    <string name="offscreen_gesture_title">Жесты на выключенном экране</string>
+    <string name="category_circle_gesture">Жест O</string>
+    <string name="category_down_arrow_gesture">Жест V</string>
+    <string name="category_up_arrow_gesture">Жест A</string>
+    <string name="category_left_arrow_gesture">Жест &lt;</string>
+    <string name="category_right_arrow_gesture">Жест &gt;</string>
+    <string name="category_gestures_summary">Настроить действия жестов</string>
+    <string name="torch_entry">Фонарик</string>
+    <string name="disabled_entry">Выключено</string>
+    <string name="camera_entry">Камера</string>
+    <string name="music_play_entry">Воспроизведение/пауза музыки</string>
+    <string name="music_prev_entry">Предыдущий трек</string>
+    <string name="music_next_entry">Следующий трек</string>
+    <string name="volume_up">Увеличить громкость</string>
+    <string name="volume_down">Уменьшить громкость</string>
+    <string name="browse_scroll_up">Прокрутка вверх</string>
+    <string name="browse_scroll_down">Прокрутка вниз</string>
+    <string name="navigate_back">Назад</string>
+    <string name="navigate_home">Домой</string>
+    <string name="navigate_recent">Недавние</string>
+    <string name="not_ready_summary">Получение разрешения...</string>
+    <string name="resolve_failed_summary">Ошибка получения разрешения приложения</string>
+    <string name="category_s_gesture">Жест S</string>
+    <string name="category_m_gesture">Жест M</string>
+    <string name="category_w_gesture">Жест W</string>
+    <string name="doze_category_title">Активный экран</string>
+    <string name="doze_category_summary">Включение экрана при получении уведомлений</string>
+    <string name="wave_check_summary">Пульсирующие уведомления при проведении рукой над телефоном</string>
+    <string name="wave_check_title">Провести рукой над телефоном</string>
+    <string name="tilt_check_summary">Пульсирующие уведомления при поднятии телефона</string>
+    <string name="tilt_check_title">Поднятие</string>
+    <string name="pocket_check_summary">Пульсирующие уведомления при извлечении из кармана</string>
+    <string name="pocket_check_title">Карман</string>
+    <string name="ambient_display_enable">Активный экран должен быть включен в настройках экрана</string>
+    <string name="panel_category_title">Режимы панели</string>
+    <string name="panel_category_summary">Режимы цветокоррекции панели</string>
+    <string name="off_mode_title">Выкл.</string>
+    <string name="tile_panel_mode">Режимы панели</string>
+    <string name="tile_hbm_mode">Режимы повышенной яркости</string>
+    <string name="wake_entry">Пробуждение</string>
+    <string name="single_tap_title">Одиночное нажатие</string>
+    <string name="single_tap_summary">Показывать ambient display при одиночном нажатии</string>
+    <string name="refresh_title">Обновление экрана</string>
+    <string name="tile_refresh_rate">Частота обновления экрана</string>
+    <string name="auto_refresh_rate_summary">Разрешить приложениям решать, какую частоту обновления использовать</string>
+    <string name="auto_refresh_rate_title">Режим автообновления</string>
+    <string name="refresh_rate_summary">Выберите частоту обновления 60 Гц или 90 Гц</string>
+    <string name="refresh_rate_title">Принудительно установить частоту обновления 90 Гц</string>
+    <string name="refresh_rate_warning">Использование принудительных 90 Гц значительно повлияет на срок службы батареи</string>
+    <string name="fps_info_title">FPS наложение</string>
+    <string name="fps_info_summary">Показывать наложение с текущей частотой кадров в секунду</string>
+    <string name="panel_mode_info">Для отключения режимов панели требуется перезагрузка.</string>
+</resources>

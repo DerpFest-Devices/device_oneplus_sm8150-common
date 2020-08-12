@@ -24,4 +24,10 @@
     <!-- Whether the binned brightness sensor reports a value of 0 on proximity
          near events -->
     <bool name="doze_brightness_sensor_reports_proximity">false</bool>
+
+    <!-- The CPU temperature sensor path, defaults to empty -->
+    <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
+
+    <!-- The CPU temperature divider, if needed -->
+    <integer name="config_cpuTempDivider" translatable="false">1000</integer>
 </resources>
