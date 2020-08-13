@@ -444,10 +444,6 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-service \
     thermal.msmnile
 
-# tri-state key
-PRODUCT_PACKAGES += \
-    tri-state-key_daemon
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
