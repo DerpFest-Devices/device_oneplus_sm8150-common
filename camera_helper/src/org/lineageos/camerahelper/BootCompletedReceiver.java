@@ -27,7 +27,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         Log.d(TAG, "Starting");
-        context.startService(new Intent(context, CameraMotorService.class));
-        context.startService(new Intent(context, FallSensorService.class));
+        context.startService(new Intent(context, PopupCameraService.class));
     }
 }
