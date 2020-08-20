@@ -82,7 +82,7 @@
     <string name="category_s_gesture">S hareketi</string>
     <string name="category_m_gesture">M hareketi</string>
     <string name="category_w_gesture">W hareketi</string>
-    <string name="doze_category_title">Fa\'âl ekran</string>
+    <string name="doze_category_title">Ortam ekranı</string>
     <string name="doze_category_summary">Bildirim aldığınızda ekranı uyandırır</string>
     <string name="wave_check_summary">Bildirimleri el sallandığı zaman gösterir</string>
     <string name="wave_check_title">El sallama</string>
@@ -90,7 +90,7 @@
     <string name="tilt_check_title">Ele alma</string>
     <string name="pocket_check_summary">Bildirimleri cihaz cepten çıkarıldığı zaman gösterir</string>
     <string name="pocket_check_title">Cep</string>
-    <string name="ambient_display_enable">Ekran ayarlarındaki fa\'âl ekran devreye sokulmalıdır</string>
+    <string name="ambient_display_enable">Ekran ayarlarındaki ortam ekranı devreye sokulmalıdır</string>
     <string name="panel_category_title">Panel modları</string>
     <string name="panel_category_summary">Panel rengini düzeltme modları</string>
     <string name="off_mode_title">Kapalı</string>
@@ -98,7 +98,7 @@
     <string name="tile_hbm_mode">Yüksek parlaklık modları</string>
     <string name="wake_entry">Uyanma</string>
     <string name="single_tap_title">Tek dokunuş</string>
-    <string name="single_tap_summary">Fa\'âl ekranı tek dokunuşta gösterir</string>
+    <string name="single_tap_summary">Ortam ekranını tek dokunuşta gösterir</string>
     <string name="refresh_title">Ekran yenilemesi</string>
     <string name="tile_refresh_rate">Ekran yenilemesi oranı</string>
     <string name="auto_refresh_rate_summary">Uygulamaların hangi oranı kullanacaklarına karar vermelerine müsaade eder</string>
