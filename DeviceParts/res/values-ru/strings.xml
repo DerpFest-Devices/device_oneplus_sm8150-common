@@ -59,8 +59,8 @@
     <string name="category_double_swipe_gesture">Жест ll</string>
     <string name="offscreen_gesture_title">Жесты на выключенном экране</string>
     <string name="category_circle_gesture">Жест O</string>
-    <string name="category_down_arrow_gesture">Жест V</string>
-    <string name="category_up_arrow_gesture">Жест A</string>
+    <string name="category_down_arrow_gesture">Жест A</string>
+    <string name="category_up_arrow_gesture">Жест V</string>
     <string name="category_left_arrow_gesture">Жест &lt;</string>
     <string name="category_right_arrow_gesture">Жест &gt;</string>
     <string name="category_gestures_summary">Настроить действия жестов</string>

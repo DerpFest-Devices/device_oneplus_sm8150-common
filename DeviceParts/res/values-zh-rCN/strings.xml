@@ -56,8 +56,8 @@
     <string name="category_double_swipe_gesture">II 手势</string>
     <string name="offscreen_gesture_title">熄屏手势</string>
     <string name="category_circle_gesture">O 手势</string>
-    <string name="category_down_arrow_gesture">V 手势</string>
-    <string name="category_up_arrow_gesture">A 手势</string>
+    <string name="category_down_arrow_gesture">A 手势</string>
+    <string name="category_up_arrow_gesture">V 手势</string>
     <string name="category_left_arrow_gesture">&lt; 手势</string>
     <string name="category_right_arrow_gesture">&gt; 手势</string>
     <string name="category_gestures_summary">配置手势操作</string>

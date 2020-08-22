@@ -41,8 +41,8 @@
     <string name="category_double_swipe_gesture">II gesto</string>
     <string name="offscreen_gesture_title">Gestos com ecrã desligado</string>
     <string name="category_circle_gesture">O gesto</string>
-    <string name="category_down_arrow_gesture">V gesto</string>
-    <string name="category_up_arrow_gesture">A gesto</string>
+    <string name="category_down_arrow_gesture">A gesto</string>
+    <string name="category_up_arrow_gesture">V gesto</string>
     <string name="category_left_arrow_gesture">&lt; gesto</string>
     <string name="category_right_arrow_gesture">&gt; gesto</string>
     <string name="category_gestures_summary">Configurar ações de gesto</string>

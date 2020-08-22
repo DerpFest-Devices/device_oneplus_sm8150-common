@@ -59,8 +59,8 @@
     <string name="category_double_swipe_gesture">II-Geste</string>
     <string name="offscreen_gesture_title">Gesten bei ausgeschaltetem Bildschirm</string>
     <string name="category_circle_gesture">O-Geste</string>
-    <string name="category_down_arrow_gesture">V-Geste</string>
-    <string name="category_up_arrow_gesture">A-Geste</string>
+    <string name="category_down_arrow_gesture">A-Geste</string>
+    <string name="category_up_arrow_gesture">V-Geste</string>
     <string name="category_left_arrow_gesture">&lt;-Geste</string>
     <string name="category_right_arrow_gesture">&gt;-Geste</string>
     <string name="category_gestures_summary">Gestenaktionen konfigurieren</string>

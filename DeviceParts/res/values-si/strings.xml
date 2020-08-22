@@ -41,8 +41,8 @@
     <string name="category_double_swipe_gesture">II hareketi</string>
     <string name="offscreen_gesture_title">Kapalı ekran hareketleri</string>
     <string name="category_circle_gesture">O hareketi</string>
-    <string name="category_down_arrow_gesture">V hareketi</string>
-    <string name="category_up_arrow_gesture">A hareketi</string>
+    <string name="category_down_arrow_gesture">A hareketi</string>
+    <string name="category_up_arrow_gesture">V hareketi</string>
     <string name="category_left_arrow_gesture">&lt; hareketi</string>
     <string name="category_right_arrow_gesture">&gt; hareketi</string>
     <string name="category_gestures_summary">Hareket eylemlerini ayarlayın</string>

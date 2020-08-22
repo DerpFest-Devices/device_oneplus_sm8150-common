@@ -35,8 +35,8 @@
     <string name="choose_app">Choisir l\'app</string>
     <string name="category_double_swipe_gesture">Geste II</string>
     <string name="category_circle_gesture">Geste O</string>
-    <string name="category_down_arrow_gesture">Geste V</string>
-    <string name="category_up_arrow_gesture">Geste A</string>
+    <string name="category_down_arrow_gesture">Geste A</string>
+    <string name="category_up_arrow_gesture">Geste V</string>
     <string name="torch_entry">Lampe de poche</string>
     <string name="disabled_entry">Désactivé</string>
     <string name="camera_entry">Appareil photo</string>

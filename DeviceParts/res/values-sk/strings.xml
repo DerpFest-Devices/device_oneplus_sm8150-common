@@ -41,8 +41,8 @@
     <string name="category_double_swipe_gesture">Gesto II</string>
     <string name="offscreen_gesture_title">Gestá pri vypnutej obrazovke</string>
     <string name="category_circle_gesture">Gesto O</string>
-    <string name="category_down_arrow_gesture">Gesto V</string>
-    <string name="category_up_arrow_gesture">Gesto A</string>
+    <string name="category_down_arrow_gesture">Gesto A</string>
+    <string name="category_up_arrow_gesture">Gesto V</string>
     <string name="category_left_arrow_gesture">Gesto &lt;</string>
     <string name="category_right_arrow_gesture">Gesto &gt;</string>
     <string name="category_gestures_summary">Konfigurácia akcií gest</string>

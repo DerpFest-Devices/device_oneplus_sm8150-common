@@ -41,8 +41,8 @@
     <string name="category_double_swipe_gesture">Gesture doppio swipe</string>
     <string name="offscreen_gesture_title">Gesture a schermo spento</string>
     <string name="category_circle_gesture">Gesture disegna un cerchio</string>
-    <string name="category_down_arrow_gesture">Gesture disegna una V</string>
-    <string name="category_up_arrow_gesture">Gesture disegna una A</string>
+    <string name="category_down_arrow_gesture">Gesture disegna una A</string>
+    <string name="category_up_arrow_gesture">Gesture disegna una V</string>
     <string name="category_left_arrow_gesture">&lt; gesture</string>
     <string name="category_right_arrow_gesture">&gt; gesture</string>
     <string name="category_gestures_summary">Configura le azioni delle gesture</string>

@@ -41,8 +41,8 @@
     <string name="category_double_swipe_gesture">II gesztus</string>
     <string name="offscreen_gesture_title">Kikapcsolt képernyős gesztusok</string>
     <string name="category_circle_gesture">O gesztus</string>
-    <string name="category_down_arrow_gesture">V gesztus</string>
-    <string name="category_up_arrow_gesture">A gesztus</string>
+    <string name="category_down_arrow_gesture">A gesztus</string>
+    <string name="category_up_arrow_gesture">V gesztus</string>
     <string name="category_left_arrow_gesture">&lt; gesztus</string>
     <string name="category_right_arrow_gesture">&gt; gesztus</string>
     <string name="category_gestures_summary">Gesztus műveletek konfigurálása</string>

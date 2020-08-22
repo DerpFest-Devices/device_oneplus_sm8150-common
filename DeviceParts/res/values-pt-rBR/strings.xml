@@ -60,7 +60,7 @@
     <string name="offscreen_gesture_title">Gestos de tela desligada</string>
     <string name="category_circle_gesture">Gesto O</string>
     <string name="category_down_arrow_gesture">Gesto A</string>
-    <string name="category_up_arrow_gesture">Gesto A</string>
+    <string name="category_up_arrow_gesture">Gesto V</string>
     <string name="category_left_arrow_gesture">Gesto &lt;</string>
     <string name="category_right_arrow_gesture">Gesto &gt;</string>
     <string name="category_gestures_summary">Configurar ações de gesto</string>
