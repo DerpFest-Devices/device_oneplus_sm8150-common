@@ -47,14 +47,6 @@
     <string name="wide_mode_title_new">Režim širokého spektra barev</string>
     <string name="dci_mode_title_new">Režim DCI-P3</string>
     <string name="Night_mode_title">Noční režim</string>
-    <string name="otg_switch_summary">Povolit/zakázat podporu USB-OTG</string>
-    <string name="otg_switch_title">Podpora USB-OTG</string>
-    <string name="audio_title">Dolby Atmos</string>
-    <string name="dolby_title">Nastavit</string>
-    <string name="dolby_summary">Vyberte a nakonfigurujte efekty</string>
-    <string name="enable_dolby_summary">Zapnout/vypnout Dolby Atmos</string>
-    <string name="enable_dolby_title">Zapnout</string>
-    <string name="enable_dolby_info">Zapnutí a vypnutí vyžaduje restartování systému.</string>
     <string name="choose_app">Vybrat aplikaci</string>
     <string name="category_double_swipe_gesture">Gesto II</string>
     <string name="offscreen_gesture_title">Gesta při vypnuté obrazovce</string>

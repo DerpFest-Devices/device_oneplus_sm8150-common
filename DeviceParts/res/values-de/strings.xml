@@ -47,14 +47,6 @@
     <string name="wide_mode_title_new">Breiter Farbmodus</string>
     <string name="dci_mode_title_new">DCI-P3-Modus</string>
     <string name="Night_mode_title">Nachtmodus</string>
-    <string name="otg_switch_summary">USB-OTG-Unterstützung ein-/ausschalten</string>
-    <string name="otg_switch_title">USB-OTG-Unterstützung</string>
-    <string name="audio_title">Dolby Atmos</string>
-    <string name="dolby_title">Konfigurieren</string>
-    <string name="dolby_summary">Effekte auswählen und konfigurieren</string>
-    <string name="enable_dolby_summary">Dolby Atmos aktivieren/deaktivieren</string>
-    <string name="enable_dolby_title">Aktivieren</string>
-    <string name="enable_dolby_info">Aktivieren und deaktivieren erfordert einen Neustart, um wirksam zu werden.</string>
     <string name="choose_app">App wählen</string>
     <string name="category_double_swipe_gesture">II-Geste</string>
     <string name="offscreen_gesture_title">Gesten bei ausgeschaltetem Bildschirm</string>

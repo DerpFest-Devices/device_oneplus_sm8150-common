@@ -47,14 +47,6 @@
     <string name="wide_mode_title_new">ワイド色モード</string>
     <string name="dci_mode_title_new">DCI-P3 モード</string>
     <string name="Night_mode_title">夜間モード</string>
-    <string name="otg_switch_summary">USB-OTG のサポートを切り替える</string>
-    <string name="otg_switch_title">USB-OTG サポート</string>
-    <string name="audio_title">Dolby Atmos</string>
-    <string name="dolby_title">設定</string>
-    <string name="dolby_summary">エフェクトを設定する</string>
-    <string name="enable_dolby_summary">Dolby Atmos を切り替える</string>
-    <string name="enable_dolby_title">有効</string>
-    <string name="enable_dolby_info">エフェクト切り替えには再起動が必要です</string>
     <string name="choose_app">アプリの選択</string>
     <string name="category_double_swipe_gesture">II ジェスチャー</string>
     <string name="offscreen_gesture_title">画面消灯ジェスチャー</string>

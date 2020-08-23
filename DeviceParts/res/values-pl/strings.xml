@@ -47,14 +47,6 @@
     <string name="wide_mode_title_new">Tryb szerokiej gamy kolorów</string>
     <string name="dci_mode_title_new">Tryb DCI-P3</string>
     <string name="Night_mode_title">Tryb nocny</string>
-    <string name="otg_switch_summary">Włącz/Wyłącz obsługę USB-OTG</string>
-    <string name="otg_switch_title">Wsparcie USB-OTG</string>
-    <string name="audio_title">Dolby Atmos</string>
-    <string name="dolby_title">Konfiguruj</string>
-    <string name="dolby_summary">Wybierz i skonfiguruj efekty</string>
-    <string name="enable_dolby_summary">Włącz/wyłącz Dolby Atmos</string>
-    <string name="enable_dolby_title">Włącz</string>
-    <string name="enable_dolby_info">Włącz i wyłącz wymaga ponownego uruchomienia.</string>
     <string name="choose_app">Wybierz aplikację</string>
     <string name="category_double_swipe_gesture">Gest II</string>
     <string name="offscreen_gesture_title">Gesty poza ekranem</string>

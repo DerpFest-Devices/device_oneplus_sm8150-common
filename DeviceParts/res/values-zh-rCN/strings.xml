@@ -46,12 +46,6 @@
     <string name="wide_mode_title_new">广色域模式</string>
     <string name="dci_mode_title_new">DCI-P3模式</string>
     <string name="Night_mode_title">夜间模式</string>
-    <string name="otg_switch_summary">启用/禁用 USB-OTG 支持</string>
-    <string name="otg_switch_title">USB-OTG 支持</string>
-    <string name="audio_title">杜比全景声</string>
-    <string name="enable_dolby_summary">启用/禁用杜比全景声</string>
-    <string name="enable_dolby_title">启用</string>
-    <string name="enable_dolby_info">启用和禁用需要重启才能生效。</string>
     <string name="choose_app">选择应用</string>
     <string name="category_double_swipe_gesture">II 手势</string>
     <string name="offscreen_gesture_title">熄屏手势</string>

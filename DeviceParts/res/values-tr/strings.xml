@@ -47,14 +47,6 @@
     <string name="wide_mode_title_new">Geniş renk modu</string>
     <string name="dci_mode_title_new">DCI-P3 modu</string>
     <string name="Night_mode_title">Gece modu</string>
-    <string name="otg_switch_summary">USB-OTG desteğini devreye sokar veyâ devre dışı bırakır</string>
-    <string name="otg_switch_title">USB-OTG desteği</string>
-    <string name="audio_title">Dolby Atmos</string>
-    <string name="dolby_title">Ayarla</string>
-    <string name="dolby_summary">Efektleri seçin ve ayarlayın</string>
-    <string name="enable_dolby_summary">Dolby Atmos\'u devreye sokar veyâ devre dışı bırakır</string>
-    <string name="enable_dolby_title">Devreye sok</string>
-    <string name="enable_dolby_info">Devreye sokmanın ve devre dışı bırakmanın etkili olması için tekrar başlatma gerekmektedir.</string>
     <string name="choose_app">Uygulama seçin</string>
     <string name="category_double_swipe_gesture">II hareketi</string>
     <string name="offscreen_gesture_title">Kapalı ekran hareketleri</string>

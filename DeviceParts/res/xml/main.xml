@@ -65,41 +65,6 @@
             android:persistent="false" />
     </PreferenceCategory>
 
-<!--    <PreferenceCategory
-        android:title="@string/buttons_title"
-        android:key="buttons_category">
-        <SwitchPreference
-            android:key="swap_back_recents"
-            android:summary="@string/swap_back_recents_summary"
-            android:title="@string/swap_back_recents_title"
-            android:persistent="false" />
-    </PreferenceCategory>
--->
-    <PreferenceCategory
-        android:key="audio"
-        android:title="@string/audio_title">
-        <SwitchPreference
-            android:key="enable_dolby_atmos"
-            android:summary="@string/enable_dolby_summary"
-            android:title="@string/enable_dolby_title"
-            android:defaultValue="true"
-            android:persistent="true" />
-        <Preference
-            android:key="dolby_atmos"
-            android:title="@string/dolby_title"
-            android:summary="@string/dolby_summary"
-            android:dependency="enable_dolby_atmos"
-            android:persistent="false" >
-            <intent
-                 android:targetPackage="com.oneplus.sound.tuner"
-                 android:targetClass="com.oneplus.sound.tuner.panoramic.DolbyPanoramicSoundActivity" />
-        </Preference>
-        <Preference
-            android:icon="@drawable/ic_info_outline_24dp"
-            android:persistent="false"
-            android:summary="@string/enable_dolby_info" />
-    </PreferenceCategory>
-
     <PreferenceCategory
         android:key="refresh"
         android:title="@string/refresh_title">

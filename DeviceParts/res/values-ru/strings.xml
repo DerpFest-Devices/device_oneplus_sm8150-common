@@ -47,14 +47,6 @@
     <string name="wide_mode_title_new">Режим широкого цвета</string>
     <string name="dci_mode_title_new">Режим DCI-P3</string>
     <string name="Night_mode_title">Ночной режим</string>
-    <string name="otg_switch_summary">Включить/выключить поддержку USB-OTG</string>
-    <string name="otg_switch_title">Поддержка USB-OTG</string>
-    <string name="audio_title">Dolby Atmos</string>
-    <string name="dolby_title">Настроить</string>
-    <string name="dolby_summary">Выбрать и настроить эффекты</string>
-    <string name="enable_dolby_summary">Включить/выключить Dolby Atmos</string>
-    <string name="enable_dolby_title">Включено</string>
-    <string name="enable_dolby_info">Чтобы включение и отключение вступили в силу, требуется перезагрузка.</string>
     <string name="choose_app">Выбрать приложение</string>
     <string name="category_double_swipe_gesture">Жест ll</string>
     <string name="offscreen_gesture_title">Жесты на выключенном экране</string>
