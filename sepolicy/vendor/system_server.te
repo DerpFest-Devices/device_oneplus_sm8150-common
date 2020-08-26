@@ -1,0 +1,2 @@
+r_dir_file(system_server, sysfs_usb_supply);
+r_dir_file(system_server, sysfs_battery_supply);
