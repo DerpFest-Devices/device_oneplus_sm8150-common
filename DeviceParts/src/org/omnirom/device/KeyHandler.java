@@ -100,8 +100,6 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final int HANDWAVE_MAX_DELTA_MS = 1000;
     private static final int POCKET_MIN_DELTA_MS = 5000;
 
-    private static final boolean sIsOnePlus7t = android.os.Build.DEVICE.equals("hotdogb");
-
     public static final String CLIENT_PACKAGE_NAME = "com.oneplus.camera";
     public static final String CLIENT_PACKAGE_PATH = "/data/misc/lineage/client_package_name";
 
@@ -330,9 +328,6 @@ public class KeyHandler implements DeviceKeyHandler {
         if (isOPCameraAvail) {
             mClientObserver = new ClientPackageNameObserver(CLIENT_PACKAGE_PATH);
             mClientObserver.startWatching();
-        }
-        if (sIsOnePlus7t) {
-            initTriStateHallSensor();
         }
     }
 
@@ -707,22 +702,5 @@ public class KeyHandler implements DeviceKeyHandler {
                 }
             }
         }
-    }
-
-    private void initTriStateHallSensor() {
-        String calibData = Utils.getFileValue(TRI_STATE_CALIB_DATA, "0,0;0,0;0,0");
-        if (DEBUG) Log.i(TAG, "calibData = " + calibData);
-        String[] pairs = calibData.split(";");
-        List<String> valueList = new ArrayList<>();
-        for (String pair : pairs) {
-            String[] valuePair = pair.split(",");
-            String lowValue = valuePair[0];
-            valueList.add(lowValue);
-            String hightValue = valuePair[1];
-            valueList.add(hightValue);
-        }
-        String calibDataString = TextUtils.join(",", valueList);
-        if (DEBUG) Log.i(TAG, "calibDataString = " + calibDataString);
-        Utils.writeValue(TRI_STATE_CALIB_PATH, calibDataString);
     }
 }
