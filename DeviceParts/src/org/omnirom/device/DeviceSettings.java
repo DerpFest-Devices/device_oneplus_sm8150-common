@@ -17,11 +17,13 @@
 */
 package org.omnirom.device;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.ListPreference;
@@ -39,6 +41,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String KEY_SLIDER_MODE_TOP = "slider_mode_top";
     private static final String KEY_SLIDER_MODE_CENTER = "slider_mode_center";
     private static final String KEY_SLIDER_MODE_BOTTOM = "slider_mode_bottom";
+    private static final String KEY_CATEGORY_CAMERA = "camera";
     private static final String KEY_CATEGORY_GRAPHICS = "graphics";
     private static final String KEY_CATEGORY_REFRESH = "refresh";
 
@@ -53,15 +56,22 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_REFRESH_RATE = "refresh_rate";
     public static final String KEY_AUTO_REFRESH_RATE = "auto_refresh_rate";
     public static final String KEY_FPS_INFO = "fps_info";
+    public static final String KEY_ALWAYS_CAMERA_DIALOG = "always_on_camera_dialog";
 
     public static final String SLIDER_DEFAULT_VALUE = "2,1,0";
 
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
+    private static final boolean sHasPopupCamera =
+                    android.os.Build.DEVICE.equals("guacamole") ||
+                    android.os.Build.DEVICE.equals("hotdog");
+
     private VibratorStrengthPreference mVibratorStrength;
     private ListPreference mSliderModeTop;
     private ListPreference mSliderModeCenter;
     private ListPreference mSliderModeBottom;
+    private SwitchPreference mAlwaysCameraSwitch;
+    private PreferenceCategory mCameraCategory;
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mDCDModeSwitch;
     private static TwoStatePreference mRefreshRate;
@@ -121,12 +131,23 @@ public class DeviceSettings extends PreferenceFragment implements
         mFpsInfo = (SwitchPreference) findPreference(KEY_FPS_INFO);
         mFpsInfo.setChecked(prefs.getBoolean(KEY_FPS_INFO, false));
         mFpsInfo.setOnPreferenceChangeListener(this);
+
+        mCameraCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_CAMERA);
+        if (sHasPopupCamera) {
+            mAlwaysCameraSwitch = (SwitchPreference) findPreference(KEY_ALWAYS_CAMERA_DIALOG);
+            boolean enabled = Settings.System.getInt(getContext().getContentResolver(),
+                        KEY_SETTINGS_PREFIX + KEY_ALWAYS_CAMERA_DIALOG, 0) == 1;
+            mAlwaysCameraSwitch.setChecked(enabled);
+            mAlwaysCameraSwitch.setOnPreferenceChangeListener(this);
+        } else {
+            mCameraCategory.setVisible(false);
+        }
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mAutoRefreshRate) {
-              mRefreshRate.setEnabled(!AutoRefreshRateSwitch.isCurrentlyEnabled(this.getContext()));
+            mRefreshRate.setEnabled(!AutoRefreshRateSwitch.isCurrentlyEnabled(this.getContext()));
         }
         return super.onPreferenceTreeClick(preference);
     }
@@ -159,6 +180,11 @@ public class DeviceSettings extends PreferenceFragment implements
             } else {
                 this.getContext().stopService(fpsinfo);
             }
+        } else if (preference == mAlwaysCameraSwitch) {
+            boolean enabled = (Boolean) newValue;
+            Settings.System.putInt(getContext().getContentResolver(),
+                        KEY_SETTINGS_PREFIX + KEY_ALWAYS_CAMERA_DIALOG,
+                        enabled ? 1 : 0);
         }
         return true;
     }
