@@ -329,6 +329,16 @@ public class KeyHandler implements DeviceKeyHandler {
         (new UEventObserver() {
             @Override
             public void onUEvent(UEventObserver.UEvent event) {
+                // TODO: Add all common device's offsets here:
+                int yOffset; // slider position offset from top
+                int spacing; // space between slider positions
+                switch (android.os.Build.DEVICE) {
+                    default:
+                    case "guacamole":
+                        yOffset = 630;
+                        spacing = 45;
+                        break;
+                }
                 try {
                     String state = event.get("STATE");
                     boolean ringing = state.contains("USB=0");
@@ -336,11 +346,11 @@ public class KeyHandler implements DeviceKeyHandler {
                     boolean vibrate = state.contains("USB-HOST=0");
                     if (DEBUG) Log.i(TAG, "state = " + state + " Got ringing = " + ringing + ", silent = " + silent + ", vibrate = " + vibrate);
                     if(ringing && !silent && !vibrate)
-                        doHandleSliderAction(2, 180);
+                        doHandleSliderAction(2, yOffset + spacing * 2);
                     if(silent && !ringing && !vibrate)
-                        doHandleSliderAction(0, 90);
+                        doHandleSliderAction(0, yOffset);
                     if(vibrate && !silent && !ringing)
-                        doHandleSliderAction(1, 135);
+                        doHandleSliderAction(1, yOffset + spacing);
                 } catch(Exception e) {
                     Log.e(TAG, "Failed parsing uevent", e);
                 }
