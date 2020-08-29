@@ -70,7 +70,7 @@ public class Startup extends BroadcastReceiver {
             enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_AUTO_REFRESH_RATE, false);
             Settings.System.putInt(context.getContentResolver(), AutoRefreshRateSwitch.SETTINGS_KEY, enabled ? 1 : 0);
 
-            String vibrStrength = sharedPrefs.getString(DeviceSettings.KEY_VIBSTRENGTH, VibratorStrengthPreference.DEFAULT_VALUE); 
+            String vibrStrength = sharedPrefs.getString(DeviceSettings.KEY_VIBSTRENGTH, VibratorStrengthPreference.DEFAULT_VALUE);
             Settings.System.putString(context.getContentResolver(), VibratorStrengthPreference.SETTINGS_KEY, vibrStrength);
 
             Settings.System.putInt(context.getContentResolver(), "omni_device_setting_imported", 1);
@@ -86,6 +86,9 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
         }
+        enabled = context.getResources().getBoolean(com.android.internal.R.bool.config_proxiSensorWakupCheck);
+        Settings.System.putInt(context.getContentResolver(),
+                Settings.System.DEVICE_PROXI_CHECK_ENABLED, enabled ? 1: 0); 
     }
 
     public static void restoreAfterUserSwitch(Context context) {
