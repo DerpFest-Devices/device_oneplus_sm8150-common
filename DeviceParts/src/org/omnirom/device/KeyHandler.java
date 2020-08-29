@@ -335,6 +335,7 @@ public class KeyHandler implements DeviceKeyHandler {
                 switch (android.os.Build.DEVICE) {
                     default:
                     case "guacamole":
+                    case "hotdog":
                         yOffset = 630;
                         spacing = 45;
                         break;
