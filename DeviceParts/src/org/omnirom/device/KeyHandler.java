@@ -339,6 +339,10 @@ public class KeyHandler implements DeviceKeyHandler {
                         yOffset = 630;
                         spacing = 45;
                         break;
+                    case "hotdogb":
+                        yOffset = 650;
+                        spacing = 45;
+                        break;
                 }
                 try {
                     String state = event.get("STATE");
