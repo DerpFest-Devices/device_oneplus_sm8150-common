@@ -64,6 +64,11 @@ ro.bluetooth.a2dp_offload.supported=true
 persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
 ro.vendor.camera.res.fmq.size=1048576
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
+persist.camera.eis.enable=1
+persist.camera.is_mode=4
+persist.vendor.camera.oissr.debug=1
+vendor.debug.camera.eisv2enable=1
+vendor.debug.camera.eisv3enable=1
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
