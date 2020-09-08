@@ -4,13 +4,18 @@
     "target_path" : "kernel/oneplus/sm8150"
   },
   {
+    "repository"  : "vendor_oneplus",
+    "target_path" : "vendor/oneplus",
+    "branch": "ten-guac"
+  },
+  {
     "repository"  : "device_oneplus_common",
     "target_path" : "device/oneplus/common"
   },
   {
     "repository"  : "kdrag0n/proton-clang",
     "target_path" : "prebuilts/clang/host/linux-x86/clang-proton",
-    "clone_depth": "1",
+    "clone-depth": "1",
     "branch": "master",
     "remote": "github"
   }
