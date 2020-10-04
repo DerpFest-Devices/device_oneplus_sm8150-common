@@ -37,6 +37,7 @@
     </string-array>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- Hardware keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
@@ -81,5 +82,8 @@
 
     <!-- Whether key handler sends intent when changing slider position -->
     <string name="config_alertSliderIntent">com.derp.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
+
+    <!-- Defines the custom pickup sensor used by various OEMs like OnePlus-->
+    <string name="config_dozePickupSensorType">com.oneplus.sensor.pickup</string>
 
 </resources>
