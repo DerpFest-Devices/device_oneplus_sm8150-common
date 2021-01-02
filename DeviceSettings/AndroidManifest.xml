@@ -68,7 +68,7 @@
 
         <receiver android:name="org.derpfest.device.DeviceSettings.Startup"
                   android:exported="false">
-            <intent-filter android:priority="500" >
+            <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
