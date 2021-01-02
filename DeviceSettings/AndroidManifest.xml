@@ -72,7 +72,7 @@
         </service>
 
         <receiver android:name="com.derp.device.DeviceSettings.Startup" >
-            <intent-filter android:priority="100" >
+            <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
