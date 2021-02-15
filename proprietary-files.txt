@@ -1352,25 +1352,25 @@ vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Vibrator firmware
-vendor/firmware/aw8697_haptic_166.bin
-vendor/firmware/aw8697_haptic_168.bin
-vendor/firmware/aw8697_haptic_170.bin
-vendor/firmware/aw8697_haptic_172.bin
-vendor/firmware/aw8697_haptic_174.bin
-vendor/firmware/aw8697_haptic.bin
-vendor/firmware/aw8697_rtp.bin
-vendor/firmware/aw8697_rtp_lighthouse.bin
-vendor/firmware/aw8697_rtp_silk.bin
-vendor/firmware/awinic_haptic_gun_params.bin
-vendor/firmware/awinic_haptic_params.bin
-vendor/firmware/shuntai24k_rtp.bin
-vendor/firmware/wentai24k_rtp.bin
+vendor/firmware/aw8697_haptic_166.bin|fcf871338bfff4a87909cd83826ba64a77475fa0
+vendor/firmware/aw8697_haptic_168.bin|baf2b9c3ebfefe1ed9e157b41bbc93d7e6f9ac49
+vendor/firmware/aw8697_haptic_170.bin|feb5490e5ab1fc438d8911dff825474e41950367
+vendor/firmware/aw8697_haptic_172.bin|808b3207338b29dbeb9a17d91a2362524750827c
+vendor/firmware/aw8697_haptic_174.bin|d49eb7a41f674c49e6ed8859a1ab9298585054c6
+vendor/firmware/aw8697_haptic.bin|f3f92aae00b2b95b0259a25440a2883caa759340
+vendor/firmware/aw8697_rtp.bin|b2bf42d9333fffbb7f00da38d1bd1b6d5a85014a
+vendor/firmware/aw8697_rtp_lighthouse.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
+vendor/firmware/aw8697_rtp_silk.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
+vendor/firmware/awinic_haptic_gun_params.bin|b691b94d982d136d3f29c6d0783d2da7d73b0302
+vendor/firmware/awinic_haptic_params.bin|8f6d1da95bbd34a5f638d7c9d65954fa928b9267
+vendor/firmware/shuntai24k_rtp.bin|4c96a83ed4d90eb2ba739c4a6a507e0e1b0b9810
+vendor/firmware/wentai24k_rtp.bin|78ac60096e18e28d60b53670cf32f7fe4a99b7bd
 
 # Vibrator - OnePlus
-system_ext/etc/vibrator_effect_map.xml
-vendor/bin/hw/vendor.oneplus.hardware.lmvibrator@1.0-service
-vendor/etc/init/vendor.oneplus.hardware.lmvibrator@1.0-service.rc
-vendor/lib64/vendor.oneplus.hardware.lmvibrator@1.0.so
+system_ext/etc/vibrator_effect_map.xml|8a8d9301898bd494bce6b64c3d9d356610a8018a
+vendor/bin/hw/vendor.oneplus.hardware.lmvibrator@1.0-service|fc1a73cb7cf23b3906ead026a6286d173c693e0f
+vendor/etc/init/vendor.oneplus.hardware.lmvibrator@1.0-service.rc|8da80426dff98045811df287846c0931de3884ac
+vendor/lib64/vendor.oneplus.hardware.lmvibrator@1.0.so|fd2a7cdbf64c6237c907acd1f4cfab0586e95a94
 
 # WiFi
 vendor/bin/wifilearner
