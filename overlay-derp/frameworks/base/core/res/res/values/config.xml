@@ -25,8 +25,8 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>org.lineageos.device.DeviceSettings.TouchKeyHandler</item>
-        <item>org.lineageos.device.DeviceSettings.KeyHandler</item>
+        <item>com.derp.device.DeviceSettings.KeyHandler</item>
+        <item>com.derp.device.DeviceSettings.TouchKeyHandler</item>
         <item>org.lineageos.camerahelper.KeyHandler</item>
     </string-array>
 
@@ -87,5 +87,13 @@
     
     <!-- Defines custom OEM sensor for pocket detection. -->
     <string name="config_pocketJudgeVendorSensorName">oneplus.sensor.pocket</string>
+
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">com.derp.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
     
 </resources>

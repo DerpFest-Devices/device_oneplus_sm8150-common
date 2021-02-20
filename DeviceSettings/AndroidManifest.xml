@@ -13,9 +13,8 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
-          package="org.lineageos.device.DeviceSettings"
+          package="com.derp.device.DeviceSettings"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -23,11 +22,15 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <protected-broadcast android:name=">org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="com.derp.device.DeviceSettings.UPDATE_SETTINGS" />
+
+    <protected-broadcast android:name="com.derp.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
 
     <uses-sdk
-        android:minSdkVersion="24" />
+        android:minSdkVersion="28"
+        android:targetSdkVersion="29" />
 
     <application
         android:icon="@drawable/ic_settings_device"
@@ -55,7 +58,7 @@
         <activity android:name=".KeyHandler" />
 
         <activity
-            android:name="org.lineageos.device.DeviceSettings.PanelSettingsActivity"
+            android:name="com.derp.device.DeviceSettings.PanelSettingsActivity"
             android:exported="true"
             android:label="@string/panel_category_title"
             android:launchMode="singleTask" >
@@ -71,7 +74,7 @@
             android:theme="@style/AppTheme">
         </activity>
 
-        <receiver android:name="org.lineageos.device.DeviceSettings.Startup" >
+        <receiver android:name="com.derp.device.DeviceSettings.Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -79,30 +82,7 @@
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="org.lineageos.device.DeviceSettings.PanelModeTileService"
-            android:icon="@drawable/ic_panel_tile"
-            android:label="@string/tile_panel_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <service
-            android:name="org.lineageos.device.DeviceSettings.HBMModeTileService"
-            android:icon="@drawable/ic_hbm_tile"
-            android:label="@string/tile_hbm_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-
-        </service>
-
-        <service
-            android:name="org.lineageos.device.DeviceSettings.DCModeTileService"
+            android:name="com.derp.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -111,13 +91,45 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+        <service
+            android:name="com.derp.device.DeviceSettings.PanelModeTileService"
+            android:icon="@drawable/ic_panel_tile"
+            android:label="@string/tile_panel_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.derp.device.DeviceSettings.HBMModeTileService"
+            android:icon="@drawable/ic_hbm_tile"
+            android:label="@string/tile_hbm_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.derp.device.DeviceSettings.RefreshRateTileService"
+            android:icon="@drawable/ic_refresh_tile_60"
+            android:label="@string/tile_refresh_rate"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
 
-        <service android:name="org.lineageos.device.DeviceSettings.AutoHighBrightnessModeService" />
+        <service android:name="com.derp.device.DeviceSettings.FPSInfoService"
+                android:exported="false">
+        </service>
 
-        <!-- Search Provider -->
+        <!-- Search indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.lineageos.device"
+            android:authorities="com.derp.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
