@@ -73,6 +73,12 @@ dalvik.vm.heapminfree=512k
 dalvik.vm.heapsize=512m
 dalvik.vm.heapstartsize=8m
 dalvik.vm.heaptargetutilization=0.75
+pm.dexopt.boot=speed
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat64.enabled=true
 
 # Display
 ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
