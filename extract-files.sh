@@ -21,9 +21,9 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-XTENDED_ROOT="${MY_DIR}"/../../..
+DERP_ROOT="${MY_DIR}"/../../..
 
-HELPER="${XTENDED_ROOT}/vendor/xtended/build/tools/extract_utils.sh"
+HELPER="${DERP_ROOT}/vendor/derp/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -32,28 +32,24 @@ source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
-    lib/libwfdnative.so | lib64/libwfdnative.so)
+    lib/libwfdnative.so)
         sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
         ;;
-    etc/permissions/qti_libpermissions.xml)
-        sed -i -e 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
-    ;;
-    vendor/lib/hw/camera.qcom.so | vendor/lib64/hw/camera.qcom.so)
+    lib64/libwfdnative.so)
+        sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
+        ;;
+    product/lib/libdpmframework.so)
+        sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
+        ;;
+    product/lib64/libdpmframework.so)
+        sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
+        ;;
+    vendor/lib/hw/camera.qcom.so)
         sed -i "s/libhidltransport.so/qtimutex.so\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
         ;;
-
-    product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
-        sed -i -e 's|xml version=\"2.0\"|xml version=\"1.0\"|g' "${2}"
+    vendor/lib64/hw/camera.qcom.so)
+        sed -i "s/libhidltransport.so/qtimutex.so\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
         ;;
-    esac
-    case "${DEVICE}" in
-        hotdogg )
-        case "${1}" in
-            vendor/lib/libgf_ud_hal.so | vendor/lib64/libgf_ud_hal.so )
-            sed -i "s|vendor.boot.verifiedbootstate|vendor.boot.fingerprintbstate|g" "${2}"
-            ;;
-            esac
-    ;;
     esac
 }
 
@@ -87,7 +83,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper for common device
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${XTENDED_ROOT}" true "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${DERP_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
@@ -95,12 +91,12 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${XTENDED_ROOT}" false "${CLEAN_VENDOR}"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${DERP_ROOT}" false "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" \
             "${KANG}" --section "${SECTION}"
 fi
 
-COMMON_BLOB_ROOT="${XTENDED_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
+COMMON_BLOB_ROOT="${DERP_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
 
 "${MY_DIR}/setup-makefiles.sh"
