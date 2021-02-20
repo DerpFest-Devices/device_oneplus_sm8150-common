@@ -488,6 +488,12 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|6cf6e534590ccd2090f6ea4881bedf26e24
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|f693eafe5bb3aefb731d57b084da914b318539d9
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|26df2c5ff42d58456ebcd0fd7d0ba51f56a3f390
 
+# IFAA
+-system_ext/priv-app/IFAAService/IFAAService.apk
+vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
+vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
+vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
+
 # IMS
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
