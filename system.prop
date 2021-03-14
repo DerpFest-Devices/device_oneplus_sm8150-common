@@ -19,7 +19,6 @@ debug.hwui.renderer=skiavk
 # Camera
 persist.vendor.camera.privapp.list=com.oneplus.camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
-persist.camera.privapp.list=com.oneplus.camera
 
 # CNE
 persist.vendor.cne.feature=1
