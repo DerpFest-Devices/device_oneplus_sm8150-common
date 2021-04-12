@@ -280,7 +280,9 @@ on boot
     chmod 666 /dev/input/event1
     chmod 666 /dev/input/event2
     chmod 666 /dev/input/event8
+    chmod 666 /dev/input/event9
     chmod 666 /dev/input/event10
+    chmod 666 /dev/input/event11
 #endif /*VENDOR_EDIT*/
 
 on init
@@ -357,8 +359,10 @@ on post-fs
 #ken.chenxm@SYSTEM, 2019/10/10, add for [OSP-3172] charging optimizated
     chown system system /sys/class/power_supply/battery/op_disable_charge
     chmod 660 /sys/class/power_supply/battery/op_disable_charge
-    chown system system /sys/class/power_supply/bms/battery_h
-    chmod 660 /sys/class/power_supply/bms/battery_h
+    chown system system /sys/class/power_supply/battery/temp
+    chmod 660 /sys/class/power_supply/battery/temp
+    chown system system /sys/class/power_supply/bms/battery_health
+    chmod 660 /sys/class/power_supply/bms/battery_health
 #endif
 #ifdef VENDOR_EDIT
 #randle.liu@optimization, 2020/04/24, [OSP-6116] avoid waking up when wireless charging disconnects
