@@ -76,6 +76,7 @@ public class KeyHandler implements DeviceKeyHandler {
     WakeLock mProximityWakeLock;
     WakeLock mGestureWakeLock;
     private int mProximityTimeOut;
+    private int mPrevKeyCode = 0;
     private boolean mProximityWakeSupported;
 
     public KeyHandler(Context context) {
@@ -118,9 +119,12 @@ public class KeyHandler implements DeviceKeyHandler {
             return null;
         }
 
-        mAudioManager.setRingerModeInternal(sSupportedSliderRingModes.get(keyCodeValue));
-        mNotificationManager.setZenMode(sSupportedSliderZenModes.get(keyCodeValue), null, TAG);
         doHapticFeedback(sSupportedSliderHaptics.get(keyCodeValue));
+        mAudioManager.setRingerModeInternal(sSupportedSliderRingModes.get(keyCodeValue));
+        if (mPrevKeyCode == Constants.KEY_VALUE_TOTAL_SILENCE)
+            doHapticFeedback(sSupportedSliderHaptics.get(keyCodeValue));
+        mNotificationManager.setZenMode(sSupportedSliderZenModes.get(keyCodeValue), null, TAG);
+        mPrevKeyCode = keyCodeValue;
         int position = scanCode == 601 ? 2 : scanCode == 602 ? 1 : 0;
         sendUpdateBroadcast(position);
         return null;
