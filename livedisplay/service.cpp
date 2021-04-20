@@ -21,8 +21,7 @@
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/oneplus/AntiFlicker.h>
 #include <livedisplay/oneplus/SunlightEnhancement.h>
-#include <livedisplay/sdm/PictureAdjustment.h>
-#include <vendor/lineage/livedisplay/2.1/IPictureAdjustment.h>
+#include <livedisplay/sdm/SDMController.h>
 
 #include "DisplayModes.h"
 
@@ -32,11 +31,9 @@ using android::status_t;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
-using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 using ::vendor::lineage::livedisplay::V2_1::IAntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::IDisplayModes;
-using ::vendor::lineage::livedisplay::V2_1::IPictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::implementation::DisplayModes;
@@ -52,7 +49,6 @@ int main() {
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
     sp<AntiFlicker> af = new AntiFlicker();
     sp<DisplayModes> dm = new DisplayModes(controller);
-    sp<PictureAdjustment> pa = new PictureAdjustment(controller);
     sp<SunlightEnhancement> se = new SunlightEnhancement();
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
@@ -71,23 +67,12 @@ int main() {
         goto shutdown;
     }
 
-    status = pa->registerAsService();
-    if (status != OK) {
-        LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
-                   << status << ")";
-        goto shutdown;
-    }
-
     status = se->registerAsService();
     if (status != OK) {
         LOG(ERROR) << "Could not register service for LiveDisplay HAL SunlightEnhancement Iface ("
                    << status << ")";
         goto shutdown;
     }
-
-    // Update default PA on setDisplayMode
-    dm->registerDisplayModeSetCallback(
-            std::bind(&PictureAdjustment::updateDefaultPictureAdjustment, pa));
 
     LOG(INFO) << "LiveDisplay HAL service is ready.";
     joinRpcThreadpool();
