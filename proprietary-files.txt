@@ -453,15 +453,20 @@ vendor/lib64/vendor.oneplus.hardware.hdcpkey@1.0.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
+# Telephony/IMS
+-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|95cc8896f7115e1fdf10f007b10a8dca99096a43
+system_ext/framework/QtiTelephonyServicelibrary.jar|dbe4b294d57114dbaf012cbe39fab9c816d12b3b
+system_ext/framework/qti-telephony-common.jar|5738f04ba6c39a4513ffc9f6090848d6fcc73d1e
+system_ext/lib64/libimscamera_jni.so|217354bfe6d1e1736572218b1a34468937544350
+system_ext/lib64/libimsmedia_jni.so|c804adc4d7224303a53f6270e6c1cf9319008a05
+-system_ext/priv-app/ims/ims.apk|7c243d450cc215be2b0187d5e3e6cd01059b8cc1
+
 # IMS
--system_ext/priv-app/ims/ims.apk
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libdiag_system.so
-system_ext/lib64/libimscamera_jni.so
-system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
@@ -765,7 +770,6 @@ vendor/lib64/libqmiservices.so
 
 # RIL
 -framework/qcnvitems.jar
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
