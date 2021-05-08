@@ -7,3 +7,5 @@ libsdsprpc.so
 libfastcvopt.so
 liblistensoundmodel2.so
 libOpenCL.so
+lib_aion_buffer.so
+libOpenCL-pixel.so
