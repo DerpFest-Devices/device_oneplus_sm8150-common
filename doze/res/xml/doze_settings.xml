@@ -15,7 +15,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto" >
 
     <SwitchPreference
         android:key="always_on_display"
@@ -39,5 +41,11 @@
             android:entryValues="@array/pick_up_gesture_values" />
 
     </PreferenceCategory>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="gesture_footer"
+        android:selectable="false"
+        android:title="@string/doze_settings_help_text"
+        settings:allowDividerAbove="true" />
 
 </PreferenceScreen>
