@@ -159,7 +159,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap \
     vendor.oneplus.hardware.camera@1.0.vendor:64 \
-    vendor.oneplus.hardware.CameraMDMHIDL@1.0.vendor:64
+    vendor.qti.hardware.camera.device@1.0.vendor:64
 
 # Common init scripts
 PRODUCT_PACKAGES += \
