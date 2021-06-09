@@ -32,3 +32,6 @@ set_prop(vendor_init, vendor_ssr_prop)
 
 # Allow vendor init to set game switch
 allow vendor_init proc_touchpanel:file rw_file_perms;
+
+# Allow vendor_init to set vendor_db_security_prop
+get_prop(vendor_init, vendor_db_security_prop)
