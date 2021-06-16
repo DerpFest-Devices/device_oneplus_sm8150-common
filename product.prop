@@ -1,2 +1,9 @@
+# Audio
+audio.offload.min.duration.secs=30
+audio.sys.noisy.broadcast.delay=500
+audio.sys.mute.latency.factor=2
+audio.sys.offload.pstimeout.secs=3
+audio.sys.routing.latency=0
+
 # Camera
 ro.com.google.lens.oem_camera_package=com.oneplus.camera
