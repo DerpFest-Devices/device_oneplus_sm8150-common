@@ -507,12 +507,13 @@ vendor/lib64/vendor.oneplus.hardware.hdcpkey@1.0.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# Telephony/IMS - from LA.QSSI.11.0.r1-11600
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|a32f88ddcc8f9cba18aa5697ee5bd52201e89b13
-system_ext/framework/qti-telephony-common.jar|0d3da7628506d66852de19f296a05f728710c4e3
-system_ext/lib64/libimscamera_jni.so|140dba66979472050d044958f2aaed537d18cdc2
-system_ext/lib64/libimsmedia_jni.so|d06732d17342e445477ba508ae575263dc2096cb
--system_ext/priv-app/ims/ims.apk|9bd9423a998eae93b2c94a4820459d7b33c8a51a
+# Telephony/IMS
+-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|95cc8896f7115e1fdf10f007b10a8dca99096a43
+system_ext/framework/QtiTelephonyServicelibrary.jar|dbe4b294d57114dbaf012cbe39fab9c816d12b3b
+system_ext/framework/qti-telephony-common.jar|5738f04ba6c39a4513ffc9f6090848d6fcc73d1e
+system_ext/lib64/libimscamera_jni.so|217354bfe6d1e1736572218b1a34468937544350
+system_ext/lib64/libimsmedia_jni.so|c804adc4d7224303a53f6270e6c1cf9319008a05
+-system_ext/priv-app/ims/ims.apk|7c243d450cc215be2b0187d5e3e6cd01059b8cc1
 
 # IFAA
 -system_ext/priv-app/IFAAService/IFAAService.apk
