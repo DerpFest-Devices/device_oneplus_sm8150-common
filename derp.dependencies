@@ -8,9 +8,9 @@
     "target_path" : "vendor/oneplus"
   },
   {
-    "repository"  : "crdroidandroid/android_vendor_oneplus_apps",
+    "repository"  : "vendor_oneplus_apps",
     "target_path" : "vendor/oneplus/apps",
-    "branch"      : "11.0",
-    "remote"      : "gitlab"
+    "branch"      : "11",
+    "remote"      : "derp-gitlab"
   }
 ]
