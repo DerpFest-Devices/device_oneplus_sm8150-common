@@ -327,7 +327,6 @@ public class TouchKeyHandler implements DeviceKeyHandler {
             mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
             final Intent intent = new Intent(PULSE_ACTION);
             mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT);
-            doHapticFeedback();
         }
     }
 
