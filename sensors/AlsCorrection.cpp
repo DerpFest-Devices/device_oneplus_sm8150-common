@@ -73,13 +73,11 @@ void AlsCorrection::correct(float& light) {
         correction = correction * (((float) screen_brightness) / ((float) max_brightness));
         correction += als_bias;
     }
+    ALOGV("Final correction: %f", correction);
     // Sensor is not accurate for low values
-    if (light - correction >= 0) {
-        light -= correction;
-    } else {
+    if (light < correction) {
         light = correction;
     }
-    ALOGV("Corrected reading: %f", light);
 }
 
 }  // namespace implementation
