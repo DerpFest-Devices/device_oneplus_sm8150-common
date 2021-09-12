@@ -8,6 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Get non-open-source specific aspects
+$(call inherit-product, vendor/oneplus/apps/config.mk)
 $(call inherit-product, vendor/oneplus/google/google.mk)
 $(call inherit-product, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
 
@@ -342,9 +343,6 @@ PRODUCT_PACKAGES += \
     Tag \
     vendor.nxp.nxpese@1.0:64 \
     vendor.nxp.nxpnfc@1.0:64
-
-# OnePlus apps
-$(call inherit-product, vendor/oneplus/apps/guacamole/config.mk)
 
 # OMX
 PRODUCT_PACKAGES += \
