@@ -489,7 +489,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|f693eafe5bb3aefb731d57
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|26df2c5ff42d58456ebcd0fd7d0ba51f56a3f390
 
 # IFAA
--system_ext/priv-app/IFAAService/IFAAService.apk
+-system_ext/priv-app/IFAAService/IFAAService.apk;PRESIGNED
 vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
 vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
 vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
