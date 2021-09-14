@@ -623,7 +623,6 @@ vendor/lib64/ese_spi_nxp.so
 vendor/lib64/hal_libnfc.so
 vendor/lib64/libchrome.so
 vendor/lib64/nfc_nci_nxp.so
-vendor/lib64/nfc_nci_nxp.so
 vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 
 # OMX
@@ -867,6 +866,11 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
+
+# Secure element
+vendor/bin/hw/android.hardware.secure_element@1.1-service|506b3393c663a857e314ce44ed838bd1b2697fc6
+vendor/etc/init/android.hardware.secure_element@1.1-service.rc|cbfae5fc573a2046b0f59cf665ede46851cfd603
+vendor/lib64/ls_client.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
