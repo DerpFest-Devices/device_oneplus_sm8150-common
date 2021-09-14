@@ -344,6 +344,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0:64 \
     android.hardware.secure_element@1.1:64 \
     com.android.nfc_extras \
+    SecureElement \
     Tag \
     vendor.nxp.nxpese@1.0:64 \
     vendor.nxp.nxpnfc@1.0:64
@@ -392,7 +393,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
     android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
     libprotobuf-cpp-full \
     libril_shim \
     librmnetctl \
