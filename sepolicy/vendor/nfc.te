@@ -1,0 +1,1 @@
+allow nfc nxpnfc_hwservice:hwservice_manager find;
