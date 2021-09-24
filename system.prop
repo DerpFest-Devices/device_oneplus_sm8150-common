@@ -24,9 +24,6 @@ vendor.camera.aux.packagelist=com.oneplus.factorymode,com.oneplus.camera,com.oem
 # Charger
 ro.charger.enable_suspend=true
 
-# Camera
-persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
-
 # CNE
 persist.vendor.cne.feature=1
 
