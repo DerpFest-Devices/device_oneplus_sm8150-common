@@ -12,5 +12,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
 	android.frameworks.sensorservice@1.0.vendor \
 	android.hardware.wifi@1.5.vendor \
-	android.hardware.gnss@1.0.vendor
+	android.hardware.gnss@1.0.vendor \
+	android.hardware.secure_element@1.1.vendor \
+	android.hardware.secure_element@1.2.vendor \
 	
