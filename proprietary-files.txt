@@ -688,6 +688,15 @@ vendor/lib64/libswvdec.so
 vendor/bin/opf-service
 vendor/etc/init/init.opf.rc
 
+# PASR - from LA.UM.9.1.r1-09600-SMxxx0.0
+-vendor/app/pasrservice/pasrservice.apk|6d4e8bab2426b03231531ec09bce922601b8e8e6
+vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service|27dd1f54cfdc65f365c6b63e9b13bdb6ade5aa70
+vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc|b34c1b9179c89cd47adce145bae9a609e5141bc0
+vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|4e83bd83fa439f15dc3c0a2256eadd81d6c45386
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|4f267bd97316c7c726fa8491d7273fe6bcca7686
+vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|c4a1d2d3d56e9c466bc7f6091a1bad1470fb63d4
+vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|4f71c0d0f9b987c35f9fb64f426db347de1586e7
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
