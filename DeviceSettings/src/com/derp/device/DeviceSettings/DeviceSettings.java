@@ -61,7 +61,6 @@ public class DeviceSettings extends PreferenceFragment
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
         addPreferencesFromResource(R.xml.main);
-        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength == null || !VibratorStrengthPreference.isSupported()) {
@@ -88,16 +87,5 @@ public class DeviceSettings extends PreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Constants.setPreferenceInt(getContext(), preference.getKey(), Integer.parseInt((String) newValue));
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        // Respond to the action bar's Up/Home button
-        case android.R.id.home:
-            getActivity().finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

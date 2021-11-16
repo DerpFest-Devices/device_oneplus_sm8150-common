@@ -28,18 +28,24 @@
 
     <uses-sdk
         android:minSdkVersion="28"
-        android:targetSdkVersion="29" />
+        android:targetSdkVersion="30" />
 
     <application
         android:icon="@drawable/ic_settings_device"
-        android:label="@string/device_title"
-        android:theme="@style/AppTheme">
+        android:label="@string/device_title">
+
+        <receiver android:name="com.derp.device.DeviceSettings.Startup" android:exported="true">
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <!-- Device Settings -->
         <activity
             android:name=".DeviceSettingsActivity"
             android:label="@string/device_title"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
@@ -60,24 +66,19 @@
             android:name=".TouchscreenGestureSettings"
             android:label="@string/touchscreen_gesture_settings_title"
             android:exported="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.SubSettingsBase">
         </activity>
 
         <service
             android:name=".RefreshRateTileService"
             android:icon="@drawable/ic_qs_refresh_rate"
+            android:exported="false"
             android:label="@string/refresh_rate_tile_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-
-        <receiver android:name="com.derp.device.DeviceSettings.Startup" android:exported="true">
-            <intent-filter android:priority="1000" >
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
 
         <!-- Search indexing -->
         <provider
