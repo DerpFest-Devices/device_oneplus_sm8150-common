@@ -38,7 +38,8 @@
         <!-- Device Settings -->
         <activity
             android:name=".DeviceSettingsActivity"
-            android:label="@string/device_title">
+            android:label="@string/device_title"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
@@ -57,11 +58,13 @@
 
         <activity
             android:name=".TouchscreenGestureSettings"
+            android:exported="true"
             android:label="@string/touchscreen_gesture_settings_title"
             android:theme="@style/AppTheme">
         </activity>
 
-        <receiver android:name="org.derpfest.device.DeviceSettings.Startup" >
+        <receiver android:name="org.derpfest.device.DeviceSettings.Startup"
+                  android:exported="false">
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
