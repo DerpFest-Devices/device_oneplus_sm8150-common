@@ -59,7 +59,6 @@ public class DeviceSettings extends PreferenceFragment
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
         addPreferencesFromResource(R.xml.main);
-        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mTopKeyPref = (ListPreference) findPreference(Constants.NOTIF_SLIDER_TOP_KEY);
         mTopKeyPref.setValueIndex(Constants.getPreferenceInt(getContext(), Constants.NOTIF_SLIDER_TOP_KEY));
@@ -81,16 +80,5 @@ public class DeviceSettings extends PreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Constants.setPreferenceInt(getContext(), preference.getKey(), Integer.parseInt((String) newValue));
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        // Respond to the action bar's Up/Home button
-        case android.R.id.home:
-            getActivity().finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
