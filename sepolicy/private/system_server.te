@@ -1,1 +1,2 @@
 allow system_server aosp_data_file:file r_file_perms;
+allow system_server sysfs_motor:file { w_file_perms getattr };
