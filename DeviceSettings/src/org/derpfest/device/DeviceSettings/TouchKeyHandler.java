@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (C) 2016 The CyanogenMod project
  *               2017 The LineageOS Project
  *
@@ -24,7 +24,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.content.res.Resources;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
@@ -71,9 +70,9 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     private final Vibrator mVibrator;
 
     private final SparseIntArray mActionMapping = new SparseIntArray();
-    private SensorManager mSensorManager;
-    private Sensor mProximitySensor;
-    private WakeLock mProximityWakeLock;
+    private final SensorManager mSensorManager;
+    private final Sensor mProximitySensor;
+    private final WakeLock mProximityWakeLock;
 
     private String mRearCameraId;
     private boolean mTorchEnabled;
@@ -101,7 +100,8 @@ public class TouchKeyHandler implements DeviceKeyHandler {
 
         mPowerManager = context.getSystemService(PowerManager.class);
         mGestureWakeLock = mPowerManager.newWakeLock(
-                PowerManager.PARTIAL_WAKE_LOCK, "TouchscreenGestureWakeLock");
+                PowerManager.PARTIAL_WAKE_LOCK,
+                "DeviceKeyHandler:TouchscreenGestureWakeLock");
 
         mEventHandler = new EventHandler();
 
@@ -110,12 +110,11 @@ public class TouchKeyHandler implements DeviceKeyHandler {
 
         mVibrator = context.getSystemService(Vibrator.class);
 
-        if (mProximitySensor != null) {
-            mSensorManager = context.getSystemService(SensorManager.class);
-            mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-            mProximityWakeLock = mPowerManager.newWakeLock(
-                    PowerManager.PARTIAL_WAKE_LOCK, "TouchscreenGestureProximityWakeLock");
-        }
+        mSensorManager = context.getSystemService(SensorManager.class);
+        mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        mProximityWakeLock = mPowerManager.newWakeLock(
+                PowerManager.PARTIAL_WAKE_LOCK,
+                "DeviceKeyHandler:TouchscreenGestureProximityWakeLock");
         mContext.registerReceiver(mUpdateReceiver,
                 new IntentFilter(Constants.UPDATE_PREFS_ACTION));
     }
@@ -161,7 +160,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void processEvent(final int action) {
-        mProximityWakeLock.acquire();
+        mProximityWakeLock.acquire(EVENT_PROCESS_WAKELOCK_DURATION);
         mSensorManager.registerListener(new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent event) {

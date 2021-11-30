@@ -37,10 +37,10 @@ import androidx.preference.SwitchPreference;
 import com.android.internal.derp.hardware.LineageHardwareManager; // Need FWB support
 import com.android.internal.derp.hardware.TouchscreenGesture; // Need FWB support
 
-import java.lang.System;
-
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.collapsingtoolbar.R;
+
+import java.lang.System;
 
 public class TouchscreenGestureSettings extends CollapsingToolbarBaseActivity
         implements PreferenceFragment.OnPreferenceStartFragmentCallback {
@@ -51,13 +51,9 @@ public class TouchscreenGestureSettings extends CollapsingToolbarBaseActivity
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, getNewFragment())
+                    .replace(R.id.content_frame, new MainSettingsFragment())
                     .commit();
         }
-    }
-
-    private PreferenceFragment getNewFragment() {
-        return new MainSettingsFragment();
     }
 
     @Override

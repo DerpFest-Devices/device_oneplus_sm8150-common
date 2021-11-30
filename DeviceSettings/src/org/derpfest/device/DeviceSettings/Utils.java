@@ -1,5 +1,6 @@
 /*
 * Copyright (C) 2013 The OmniROM Project
+* Copyright (C) 2021 Yet Another AOSP Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -41,7 +42,7 @@ public class Utils {
             return;
         }
         try {
-            FileOutputStream fos = new FileOutputStream(new File(filename));
+            FileOutputStream fos = new FileOutputStream(filename);
             fos.write(value.getBytes());
             fos.flush();
             fos.close();
@@ -93,15 +94,15 @@ public class Utils {
 
     public static boolean getFileValueAsBoolean(String filename, boolean defValue) {
         String fileValue = readLine(filename);
-        if(fileValue!=null){
-            return (fileValue.equals("0")?false:true);
+        if (fileValue != null) {
+            return (!fileValue.equals("0"));
         }
         return defValue;
     }
 
     public static String getFileValue(String filename, String defValue) {
         String fileValue = readLine(filename);
-        if(fileValue!=null){
+        if (fileValue != null) {
             return fileValue;
         }
         return defValue;

@@ -1,5 +1,6 @@
 /*
 * Copyright (C) 2017 The OmniROM Project
+* Copyright (C) 2021 Yet Another AOSP Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -17,36 +18,19 @@
 */
 package org.derpfest.device.DeviceSettings;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.Fragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.collapsingtoolbar.R;
 
 public class DeviceSettingsActivity extends CollapsingToolbarBaseActivity {
 
-    private DeviceSettings mDeviceSettingsFragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
-        if (fragment == null) {
-            mDeviceSettingsFragment = new DeviceSettings();
-            getFragmentManager().beginTransaction()
-                .add(R.id.content_frame, mDeviceSettingsFragment)
+        getFragmentManager().beginTransaction()
+                .add(R.id.content_frame, new DeviceSettings())
                 .commit();
-        } else {
-            mDeviceSettingsFragment = (DeviceSettings) fragment;
-        }
     }
 }
