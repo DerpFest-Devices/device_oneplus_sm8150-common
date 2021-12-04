@@ -123,11 +123,13 @@ persist.backup.ntpServer=0.pool.ntp.org
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
+debug.renderengine.backend=skiaglthreaded
 debug.sf.hw=0
 debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
+renderthread.skia.reduceopstasksplitting=true
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
