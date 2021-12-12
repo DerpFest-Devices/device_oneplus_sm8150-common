@@ -57,15 +57,18 @@
         <activity android:name=".KeyHandler" />
 
         <activity
-            android:name=".TouchscreenGestureSettings"
+            android:name=".TouchscreenGestureActivity"
             android:exported="true"
-            android:label="@string/touchscreen_gesture_settings_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/touchscreen_gesture_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <receiver android:name="org.derpfest.device.DeviceSettings.Startup"
                   android:exported="false">
-            <intent-filter android:priority="100" >
+            <intent-filter android:priority="500" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
