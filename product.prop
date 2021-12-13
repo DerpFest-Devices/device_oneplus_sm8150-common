@@ -4,3 +4,6 @@ audio.sys.noisy.broadcast.delay=500
 audio.sys.mute.latency.factor=2
 audio.sys.offload.pstimeout.secs=3
 audio.sys.routing.latency=0
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
