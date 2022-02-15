@@ -368,7 +368,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libril_shim \
     librmnetctl \
-    libxml2 
+    libxml2
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
@@ -467,7 +467,11 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
-    libwfdaac_vendor
+    libwfdaac_vendor \
+    WfdCommon
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
