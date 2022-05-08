@@ -18,5 +18,15 @@
     <!-- Default action ids for a device's touchscreen gestures
          The array should be sorted in the same order as the
          touchscreen gestures advertised by the device's LineageHW impl. -->
-    <integer-array name="config_defaultTouchscreenGestureActions" />
+    <integer-array name="config_defaultTouchscreenGestureActions" >
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>12</item>
+    </integer-array>
 </resources>
