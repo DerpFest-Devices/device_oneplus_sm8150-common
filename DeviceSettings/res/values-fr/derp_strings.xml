@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+     Copyright (C) 2022 DerpFest
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- General -->
+    <string name="device_title">Paramètres OnePlus</string>
+    <string name="device_summary"></string>
+
+    <!-- Screen off Gestures - Input -->
+    <string name="touchscreen_gesture_settings_title">Gestes tactiles</string>
+    <string name="touchscreen_gesture_settings_summary">Effectuer différents gestes tactiles pour des actions rapides</string>
+    <string name="touchscreen_gestures_haptic_feedback_title">Retour haptique</string>
+    <string name="touchscreen_gestures_haptic_feedback_summary">Vibrer quand un geste tactile est détecté</string>
+    <string name="touchscreen_gesture_two_finger_down_swipe_title">Glisser vers le bas avec deux doigts</string>
+    <string name="touchscreen_gesture_one_finger_up_swipe_title">Glissez vers le haut avec un doigt</string>
+    <string name="touchscreen_gesture_one_finger_up_swipe_home_title">Balayer vers le haut depuis le bouton d\'accueil</string>
+    <string name="touchscreen_gesture_one_finger_down_swipe_title">Glisser vers le bas avec un doigt</string>
+    <string name="touchscreen_gesture_one_finger_left_swipe_title">Balayez vers la gauche avec votre doigt</string>
+    <string name="touchscreen_gesture_one_finger_right_swipe_title">Glisser vers la droite avec un doigt</string>
+    <string name="touchscreen_gesture_single_tap_title">Appui court</string>
+    <string name="touchscreen_gesture_up_arrow_title">Dessiner un « Λ »</string>
+    <string name="touchscreen_gesture_down_arrow_title">Dessinez un « V »</string>
+    <string name="touchscreen_gesture_left_arrow_title">Dessiner un « &lt; »</string>
+    <string name="touchscreen_gesture_right_arrow_title">Dessiner un « &gt; »</string>
+    <string name="touchscreen_gesture_letter_c_title">Dessinez la lettre « C »</string>
+    <string name="touchscreen_gesture_letter_e_title">Dessinez la lettre « e »</string>
+    <string name="touchscreen_gesture_letter_o_title">Dessinez la lettre « O »</string>
+    <string name="touchscreen_gesture_letter_m_title">Dessiner la lettre « M »</string>
+    <string name="touchscreen_gesture_letter_s_title">Dessinez la lettre « S »</string>
+    <string name="touchscreen_gesture_letter_v_title">Dessinez la lettre \"V\"</string>
+    <string name="touchscreen_gesture_letter_w_title">Dessinez la lettre « W »</string>
+    <string name="touchscreen_gesture_letter_z_title">Dessiner la lettre « Z »</string>
+    <!-- Screen off Gestures - Actions -->
+    <string name="touchscreen_gesture_action_dialog_title">Action lors d\'un geste tactile</string>
+    <string name="touchscreen_gesture_action_do_nothing">Ne rien faire</string>
+    <string name="touchscreen_gesture_action_flashlight">Activer la lampe de poche</string>
+    <string name="touchscreen_gesture_action_camera">Ouvrir l\'appareil photo</string>
+    <string name="touchscreen_gesture_action_browser">Ouvrir le navigateur</string>
+    <string name="touchscreen_gesture_action_dialer">Ouvrir le composeur</string>
+    <string name="touchscreen_gesture_action_email">Voir vos e-mails</string>
+    <string name="touchscreen_gesture_action_messages">Voir vos messages</string>
+    <string name="touchscreen_gesture_action_play_pause_music">Lecture/Pause de la musique</string>
+    <string name="touchscreen_gesture_action_previous_track">Retourner à la piste précédente</string>
+    <string name="touchscreen_gesture_action_next_track">Passer à la piste suivante</string>
+    <string name="touchscreen_gesture_action_volume_down">Diminuer le volume du média</string>
+    <string name="touchscreen_gesture_action_volume_up">Augmenter le volume du média</string>
+    <string name="touchscreen_gesture_action_ambient_display">Montrer l\'affichage ambiant</string>
+
+    <!-- Notification slider -->
+    <string name="notification_slider_category_title">Curseur des notifications</string>
+    <string name="notification_slider_selection_dialog_title">Action</string>
+    <string name="notification_slider_top_position">En haut</string>
+    <string name="notification_slider_middle_position">Au milieu</string>
+    <string name="notification_slider_bottom_position">En bas</string>
+    <string name="notification_slider_mode_total_silence">Silence total</string>
+    <string name="notification_slider_mode_priority_only">Priorité uniquement</string>
+    <string name="notification_slider_mode_silent">Silencieux</string>
+    <string name="notification_slider_mode_vibrate">Vibreur</string>
+    <string name="notification_slider_mode_none">Normal</string>
+    <string name="buttons_dashboard_summary">Paramètres du curseur des alertes</string>
+</resources>
