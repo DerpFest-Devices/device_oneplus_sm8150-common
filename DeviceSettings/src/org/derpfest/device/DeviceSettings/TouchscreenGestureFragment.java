@@ -96,7 +96,7 @@ public class TouchscreenGestureFragment extends PreferenceFragment {
             setEntryValues(R.array.touchscreen_gesture_action_values);
             setDefaultValue(String.valueOf(defaultAction));
 
-            setIconSpaceReserved(true);
+            setIconSpaceReserved(false);
             setSummary("%s");
             setDialogTitle(R.string.touchscreen_gesture_action_dialog_title);
             setTitle(Utils.getLocalizedString(
