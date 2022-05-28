@@ -27,10 +27,6 @@ PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key-calibrate
 
-# Atrace
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service
-
 # Audio
 PRODUCT_PACKAGES += \
     acdbdata_adsp_avs_config.bin_symlink \
