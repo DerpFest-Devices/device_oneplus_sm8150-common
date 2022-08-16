@@ -1,6 +1,10 @@
 # Audio
 af.fast_track_multiplier=1
 
+# Google Lens
+ro.com.google.lens.oem_camera_package=com.oneplus.camera
+ro.com.google.lens.oem_image_package=com.oneplus.gallery
+
 # Padding for Gboard from OOS
 ro.com.google.ime.kb_pad_port_l=7
 ro.com.google.ime.kb_pad_port_r=7
