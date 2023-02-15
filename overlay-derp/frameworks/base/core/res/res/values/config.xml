@@ -10,6 +10,7 @@
         <item>/system_ext/priv-app/LineageParts/LineageParts.apk</item>
         <item>/system_ext/app/KeyHandler/KeyHandler.apk</item>
         <item>/system_ext/priv-app/OnePlusCameraHelper/OnePlusCameraHelper.apk</item>
+        <item>/system_ext/priv-app/TouchGestures/TouchGestures.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
@@ -17,6 +18,7 @@
         <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
         <item>org.lineageos.settings.device.KeyHandler</item>
         <item>org.lineageos.camerahelper.KeyHandler</item>
+        <item>com.android.touch.gestures.KeyHandler</item>
     </string-array>
 
     <!-- Hardware keys present on the device, stored as a bit field.
