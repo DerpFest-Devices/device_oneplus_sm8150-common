@@ -40,6 +40,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 TARGET_KERNEL_CONFIG := sm8150-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8150
+TARGET_WITH_KERNEL_SU := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
