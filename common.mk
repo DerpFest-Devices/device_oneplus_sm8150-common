@@ -7,7 +7,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/oneplus/google/google.mk)
 $(call inherit-product, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
 
 # Project ID Quota
@@ -92,6 +91,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
     android.hardware.bluetooth.audio-impl \
     audio.primary.default \
     audio.primary.msmnile \
