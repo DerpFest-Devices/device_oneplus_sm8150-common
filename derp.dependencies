@@ -8,5 +8,10 @@
     "remote": "derp-devices",
     "repository": "kernel_oneplus_sm8150",
     "target_path": "kernel/oneplus/sm8150"
+  },
+  {
+    "remote": "derp-devices",
+    "repository": "vendor_oneplus",
+    "target_path": "vendor/oneplus"
   }
 ]
