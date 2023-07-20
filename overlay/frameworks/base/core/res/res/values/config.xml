@@ -469,4 +469,7 @@
      <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
      <integer name="config_udfps_illumination_transition_ms">10</integer>
 
+    <!-- Maximum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMax">120</integer>
+
 </resources>
