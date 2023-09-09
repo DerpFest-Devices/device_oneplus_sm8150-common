@@ -422,6 +422,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
     libstdc++.vendor

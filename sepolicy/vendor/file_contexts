@@ -14,6 +14,7 @@
 
 # Data files
 /data/fpc_images(/.*)?            u:object_r:fpc_images_file:s0
+/data/vendor/dolby(/.*)?          u:object_r:vendor_data_file:s0
 /data/vendor/oemnvitems/4678_0    u:object_r:wifi_nv_data_file:s0
 /data/vendor/oemnvitems/4678_1    u:object_r:wifi_nv_data_file:s0
 
@@ -34,6 +35,7 @@
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oneplus           u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.1-service-qti                         u:object_r:vendor_hal_neuralnetworks_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                  u:object_r:hal_dms_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oneplus_msmnile                 u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus                               u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                             u:object_r:hal_cameraHIDL_default_exec:s0
