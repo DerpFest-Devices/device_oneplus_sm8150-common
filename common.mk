@@ -434,6 +434,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.0.vendor
 
+# Systemhelper
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelperaidl-V1-ndk.vendor
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
