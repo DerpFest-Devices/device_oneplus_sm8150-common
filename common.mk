@@ -147,6 +147,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
     liba2dpoffload \
     libbthost_if \
