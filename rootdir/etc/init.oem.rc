@@ -19,11 +19,6 @@ service load_wlan_driver /vendor/bin/sh /vendor/bin/load_wlan_driver
     disabled
     oneshot
 
-on charger
-    setprop persist.vendor.oem.dump 0
-    setprop persist.vendor.oem.ssrdump 0
-    start oemlogkit
-
 #@bsp, 2019/08/22 Add dash charging
 service dashd /vendor/bin/dashd
     class core

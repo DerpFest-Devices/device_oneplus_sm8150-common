@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on charger
+on property:init.svc.vendor.charger=running
     mkdir /dev/usb-ffs 0770 shell shell
     mkdir /dev/usb-ffs/adb 0770 shell shell
     mount configfs none /config
@@ -50,37 +50,7 @@ on charger
     setprop sys.usb.configfs 1
     start dashd
 
-on charger && property:ro.boot.type=debug
-    write /dev/kmsg "debug version, ready to trigger post-fs-data"
-# kartar@SYSTEM, 2020/05/08, IKR-260 Enable adb early in charger mode
-    start apexd
-    wait_for_prop apexd.status activated
-    perform_apex_config
-    setprop sys.usb.config adb
-    start adbd
-    write /dev/kmsg "start adbd"
-    write /config/usb_gadget/g1/idVendor 0x2A70
-    write /config/usb_gadget/g1/idProduct 0x4ee7
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-
-on charger && property:ro.boot.type=sdebug
-    write /dev/kmsg "sdebug version, ready to trigger post-fs-data"
-# kartar@SYSTEM, 2020/05/08, IKR-260 Enable adb early in charger mode
-    start apexd
-    wait_for_prop apexd.status activated
-    perform_apex_config
-    setprop sys.usb.config adb
-    start adbd
-    write /dev/kmsg "start adbd"
-    write /config/usb_gadget/g1/idVendor 0x2A70
-    write /config/usb_gadget/g1/idProduct 0x4ee7
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-
-on charger && property:ro.boot.type=auto
+on property:init.svc.vendor.charger=running
     write /dev/kmsg "ready to trigger post-fs-data"
 # kartar@SYSTEM, 2020/05/08, IKR-260 Enable adb early in charger mode
     start apexd
@@ -1731,9 +1701,6 @@ service oplus_chg_init_sh /vendor/bin/init.oplus_chg.sh
     disabled
 
 on boot
-    start oplus_chg_init_sh
-
-on charger
     start oplus_chg_init_sh
 
 on property:sys.fastcharger=true
