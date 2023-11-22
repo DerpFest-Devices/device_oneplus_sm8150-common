@@ -426,27 +426,6 @@
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
 
-    <!-- The default intensity level for alarm vibrations. See
-         Settings.System.ALARM_VIBRATION_INTENSITY more details on the constant values and
-         meanings. -->
-    <integer name="config_defaultAlarmVibrationIntensity">3</integer>
-    <!-- The default intensity level for haptic feedback. See
-         Settings.System.HAPTIC_FEEDBACK_INTENSITY more details on the constant values and
-         meanings. -->
-    <integer name="config_defaultHapticFeedbackIntensity">3</integer>
-    <!-- The default intensity level for media vibrations. See
-         Settings.System.MEDIA_VIBRATION_INTENSITY more details on the constant values and
-         meanings. -->
-    <integer name="config_defaultMediaVibrationIntensity">3</integer>
-    <!-- The default intensity level for notification vibrations. See
-         Settings.System.NOTIFICATION_VIBRATION_INTENSITY more details on the constant values and
-         meanings. -->
-    <integer name="config_defaultNotificationVibrationIntensity">3</integer>
-    <!-- The default intensity level for ring vibrations. See
-         Settings.System.RING_VIBRATION_INTENSITY more details on the constant values and
-         meanings. -->
-    <integer name="config_defaultRingVibrationIntensity">3</integer>
-
     <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
     <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
 
