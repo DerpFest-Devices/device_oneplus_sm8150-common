@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Height of the faceunlock image view -->
+    <dimen name="keyguard_face_unlock_margin_bottom">95dp</dimen>
+</resources>
