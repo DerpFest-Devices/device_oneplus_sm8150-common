@@ -38,6 +38,7 @@ persist.vendor.overlay.izat.optin=rro
 
 # Graphics
 debug.sf.enable_hwc_vds=1
+debug.sf.disable_backpressure=1
 vendor.display.enable_rotator_ui=1
 
 # IO Prefetcher
