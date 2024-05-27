@@ -43,6 +43,7 @@ TARGET_BOOTLOADER_BOARD_NAME := msmnile
 TARGET_NO_BOOTLOADER := true
 
 # Camera
+TARGET_CAMERA_SERVICE_EXT_LIB := //$(COMMON_PATH):libcameraservice_extension.opsm8150
 TARGET_USES_YCRCB_CAMERA_ENCODE := true
 
 # Properties
