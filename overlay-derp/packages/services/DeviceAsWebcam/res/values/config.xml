@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 DerpFest
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Whether to default to HQ mode. default: false -->
+    <bool name="config_HighQualityVideoDefault" translatable="false">true</bool>
+</resources>
