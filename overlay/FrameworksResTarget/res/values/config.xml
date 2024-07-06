@@ -49,4 +49,7 @@
         <item>0:2:15</item>
     </string-array>
 
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
 </resources>
