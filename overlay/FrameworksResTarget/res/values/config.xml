@@ -49,4 +49,9 @@
         <item>0:2:15</item>
     </string-array>
 
+    <integer name="config_defaultHapticFeedbackIntensity">3</integer>
+
+    <integer name="config_defaultNotificationVibrationIntensity">3</integer>
+
+    <integer name="config_defaultRingVibrationIntensity">3</integer>
 </resources>
