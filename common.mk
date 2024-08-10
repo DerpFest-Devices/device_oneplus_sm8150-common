@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudio-resampler \
     libaudioroute \
+    libbatterylistener \
     libhdmiedid \
     libexthwplugin \
     libhfp \
