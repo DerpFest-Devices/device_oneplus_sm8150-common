@@ -115,7 +115,7 @@ odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/libarcsoft_dualcam_bokeh_api.so
 odm/lib64/libarcsoft_dualcam_refocus_left.so
-odm/lib64/libarcsoft_dualcam_refocus_preview.so;DISABLE_CHECKELF
+odm/lib64/libarcsoft_dualcam_refocus_preview.so
 odm/lib64/libarcsoft_dualcam_refocus_right.so
 odm/lib64/libarcsoft_dualcam_refocus_uw.so
 odm/lib64/libormshalclient.so
@@ -204,7 +204,7 @@ vendor/lib64/libarcsoft_low_light_hdr.so
 vendor/lib64/libarcsoft_piczoom.so
 vendor/lib64/libarcsoft_portrait_distortion_correction.so
 vendor/lib64/libarcsoft_smart_denoise.so
-vendor/lib64/libarcsoft_super_night_raw.so;DISABLE_CHECKELF
+vendor/lib64/libarcsoft_super_night_raw.so
 vendor/lib64/libc++_extra.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamxfdalgov7.so
