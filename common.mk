@@ -260,6 +260,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResTarget \
     OPlusFrameworksResCommon \
+    OPlusSettingsResCommon \
     OPlusSystemUIResCommon
 
 # Partitions
